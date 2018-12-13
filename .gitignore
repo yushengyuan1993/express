@@ -74,3 +74,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+1_www.yvshare.cn_bundle.crt
+2_www.yvshare.cn.key
