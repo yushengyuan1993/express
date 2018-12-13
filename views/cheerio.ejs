@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cheerio</title>
+    <link rel='stylesheet' href='/css/style.css' />
+    <script src="/js/libs/axios.js"></script>
+  </head>
+  <body>
+    <h1>cheerio</h1>
+    <h3><%= title %></h3>
+    <p>Welcome to Cheerio</p>
+
+    <script>
+      axios.post('/cheerio/getJobs')
+    </script>
+  </body>
+</html>

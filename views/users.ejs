@@ -12,9 +12,14 @@
     <script>
       // axios.post('testpost')
       // axios.post('get-book')
-      axios.post('/video/get-tv')
-      axios.post('/video/get-film', {count: 5, page: 2})
-      axios.post('/book/get-book', {count: 5, page: 2})
+      // axios.post('/video/get-tv')
+      var obj = {count: 5, start: 0};
+      axios.post('/video/get-film', obj)
+      // axios.post('/book/get-book', {count: 5, page: 2})
+
+      // axios.post('/video/dl')
+
+      axios.post('/video/dl')
     </script>
   </body>
 </html>
