@@ -11,6 +11,7 @@ var usersRouter = require('./routes/users');
  * miniapp
  */
 var video = require('./routes/app/video');
+var book = require('./routes/app/book');
 
 var app = express();
 
@@ -40,6 +41,7 @@ app.use('/users', usersRouter);
  * miniapp
  */
 app.use('/video', video)
+app.use('/book', book)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

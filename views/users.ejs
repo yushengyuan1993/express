@@ -10,9 +10,11 @@
     <p>Welcome to <%= user[0].age %></p>
 
     <script>
-      axios.post('testpost')
+      // axios.post('testpost')
       // axios.post('get-book')
       axios.post('/video/get-tv')
+      axios.post('/video/get-film', {count: 5, page: 2})
+      axios.post('/book/get-book', {count: 5, page: 2})
     </script>
   </body>
 </html>
