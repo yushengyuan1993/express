@@ -12,7 +12,8 @@ app.get('/', function(req, res, next) {
 app.post('/getJobs', function(req, res, next) { // 浏览器端发来get请求
   var chunks = [];
   var size = 0;
-  var url = 'http://api.douban.com/v2/movie/top250?start=0&count=50';
+  var start = 200;
+  var url = 'http://api.douban.com/v2/movie/top250?start='+start+'&count=50';
 
   http.get(url, function (res) {
     res.on('data', function (chunk) {
@@ -29,13 +30,13 @@ app.post('/getJobs', function(req, res, next) { // 浏览器端发来get请求
       var str = data.toString();
       // console.log(str);
 
-      fs.writeFile('./public/data/test.json', str, function (err) {
+      fs.writeFile('./public/data/'+start + '_films_top250'+'.json', str, function (err) {
         if (err) {
           console.log('error');
         } else {
           console.log('success');
 
-          downloadImage(str);
+          downloadImage(str, start);
         }
       })
 
@@ -43,15 +44,16 @@ app.post('/getJobs', function(req, res, next) { // 浏览器端发来get请求
   });
 });
 
-function downloadImage(data) {
+function downloadImage(data, start) {
   data = JSON.parse(data);
-  console.log(data.subjects.length);
-
+  console.log('收到 ' + data.subjects.length+ ' 条数据');
+  start = 1*start;
   var subjects = data.subjects;
-  for (var i = 0; i < subjects.length; i ++) {
+  for (let i = 0; i < subjects.length; i ++) {
+    var index = start+i;
     var src = subjects[i].images.small;
 
-    var writeStream = fs.createWriteStream('./public/images/videos/' + i + '_' + subjects[i].title + '.png');
+    var writeStream = fs.createWriteStream('./public/images/videos/' +index+ '_' + subjects[i].title + '.png');
     var readStream = request(src);
     readStream.pipe(writeStream);
 
@@ -63,7 +65,7 @@ function downloadImage(data) {
     })
     writeStream.on("finish", function() {
       console.log(i + " 文件写入成功");
-      writeStream.end();
+      // writeStream.end();
     });
   }
 }
