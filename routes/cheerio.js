@@ -53,7 +53,7 @@ function downloadImage(data, start) {
     var index = start+i;
     var src = subjects[i].images.small;
 
-    var writeStream = fs.createWriteStream('./public/images/videos/' +index+ '_' + subjects[i].title + '.png');
+    var writeStream = fs.createWriteStream('./public/images/videos/' + index + '.png');
     var readStream = request(src);
     readStream.pipe(writeStream);
 
