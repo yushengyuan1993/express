@@ -11,5 +11,5 @@
 ### 2. 安装 cheerio (爬虫)
   - npm i cheerio --save
 
-### 2. 安装 request (下载图片)
+### 3. 安装 request (下载图片)
   - npm i request --save
