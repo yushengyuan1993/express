@@ -4,4 +4,4 @@
 
 - npm i
 
-- set DEBUG=myapp:* & npm start
+- DEBUG=myapp:* & npm start
