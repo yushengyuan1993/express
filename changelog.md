@@ -13,3 +13,7 @@
 
 ### 3. 安装 request (下载图片)
   - npm i request --save
+
+### 4. 豆瓣API
+  - `GET` http://api.douban.com/v2/movie/search?q= `电影名`
+  - `GET` http://api.douban.com/v2/movie/subject/`id`
