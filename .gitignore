@@ -75,7 +75,7 @@ typings/
 # dotenv environment variables file
 .env
 
-1_www.yvshare.cn_bundle.crt
-2_www.yvshare.cn.key
+1_miniapi.yvshare.cn_bundle.crt
+2_miniapi.yvshare.cn.key
 package-lock.json
 
