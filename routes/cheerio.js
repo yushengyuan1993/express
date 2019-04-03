@@ -12,6 +12,7 @@ app.get('/', function(req, res, next) {
 app.post('/getJobs', function(req, res, next) { // 浏览器端发来get请求
   var chunks = [];
   var size = 0;
+  // var start = 200;
   var start = 200;
   var url = 'http://api.douban.com/v2/movie/top250?start='+start+'&count=50';
 
@@ -36,7 +37,7 @@ app.post('/getJobs', function(req, res, next) { // 浏览器端发来get请求
         } else {
           console.log('success');
 
-          downloadImage(str, start);
+          // downloadImage(str, start);
         }
       })
 
