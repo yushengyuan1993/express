@@ -15,6 +15,8 @@ var cheerio = require('./routes/cheerio');
 
 var book = require('./routes/app/book');
 
+var keep = require('./routes/app/keep');
+
 var app = express();
 
 // view engine setup
@@ -44,6 +46,8 @@ app.use('/users', usersRouter);
  */
 app.use('/video', video)
 app.use('/book', book)
+
+app.use('/keep', keep)
 
 app.use('/cheerio', cheerio)
 
