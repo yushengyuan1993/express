@@ -53,7 +53,8 @@ app.use('/cheerio', cheerio)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  // next(createError(404));
+  res.status(404).send('你想要的东西 \n 并不存在！');
 });
 
 // error handler
