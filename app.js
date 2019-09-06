@@ -10,7 +10,7 @@ var usersRouter = require('./routes/users');
 /**
  * miniapp
  */
-var login = require('./routes/api/login');
+var miniapi = require('./routes/api/miniapi');
 
 
 var video = require('./routes/app/video');
@@ -47,7 +47,7 @@ app.use('/users', usersRouter);
 /**
  * miniapp
  */
-app.use('/user', login);
+app.use('/user', miniapi);
 
 app.use('/video', video)
 app.use('/book', book)
