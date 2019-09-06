@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 /**
  * miniapp
  */
+var login = require('./routes/api/login');
+
+
 var video = require('./routes/app/video');
 var cheerio = require('./routes/cheerio');
 
@@ -44,6 +47,8 @@ app.use('/users', usersRouter);
 /**
  * miniapp
  */
+app.use('/user', login);
+
 app.use('/video', video)
 app.use('/book', book)
 
