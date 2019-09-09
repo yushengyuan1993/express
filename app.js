@@ -12,13 +12,10 @@ var usersRouter = require('./routes/users');
  */
 var miniapi = require('./routes/api/miniapi');
 
-
 var video = require('./routes/app/video');
 var cheerio = require('./routes/cheerio');
 
 var book = require('./routes/app/book');
-
-var keep = require('./routes/app/keep');
 
 var app = express();
 
@@ -34,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 设置跨入请求
 // app.all('*', function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "http://111.231.78.140:8080");
+//   res.header("Access-Control-Allow-Origin", "*");
 //   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
 //   res.header("Access-Control-Allow-Headers", "X-Requested-With");
 //   res.header('Access-Control-Allow-Headers', 'Content-Type');
@@ -47,12 +44,10 @@ app.use('/users', usersRouter);
 /**
  * miniapp
  */
-app.use('/user', miniapi);
+app.use('/miniapi', miniapi);
 
 app.use('/video', video)
 app.use('/book', book)
-
-app.use('/keep', keep)
 
 app.use('/cheerio', cheerio)
 
