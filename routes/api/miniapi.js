@@ -82,7 +82,7 @@ router.post('/mind-map', (req, res, next) => {
     for (let j = 0; j < n2; j ++) {
       let o2 = Mock.mock({
         "title": Random.ctitle(3, 6),
-        "img": Random.image('100x100', Random.color(), '#FFF', Random.cword(2, 4))
+        "img": `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
       });
 
       arr2.push(o2);
@@ -109,8 +109,21 @@ router.post('/pk', (req, res, next) => {
       video_src: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4'
     },
     message: 'success',
-    timestamp: + new Date()
+    timestamp: +new Date()
   });
 });
+
+router.post('/t', (req, res, next) => {
+  let data = {
+    img: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
+  }
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: +new Date()
+  })
+})
 
 module.exports = router;
