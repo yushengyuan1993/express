@@ -75,6 +75,7 @@ router.post('/mind-map', (req, res, next) => {
   for(let i = 0; i < n1; i ++) {
     let o1 = Mock.mock({
       "answerIndex|0-2": 2,
+      "cover": `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
     });
 
     let n2 = Math.floor(Math.random()*3 + 3);
@@ -113,7 +114,7 @@ router.post('/pk', (req, res, next) => {
   });
 });
 
-router.post('/t', (req, res, next) => {
+router.post('/test', (req, res, next) => {
   let data = {
     img: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
   }
