@@ -15,18 +15,6 @@ router.post('/login', (req, res, next) => {
   });
 });
 
-router.post('/small-classroom', (req, res, next) => {
-  res.send({
-    code: 200,
-    data: {
-      video_id: '5285890790782139610',
-      video_src: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4'
-    },
-    message: 'success',
-    timestamp: + new Date()
-  });
-});
-
 router.post('/course-list', (req, res, next) => {
   let referer = req.headers.referer;
 
@@ -64,6 +52,48 @@ router.post('/course-list', (req, res, next) => {
   res.send({
     code: 200,
     data,
+    message: 'success',
+    timestamp: + new Date()
+  });
+});
+
+router.post('/happy-read', (req, res, next) => {
+  let data = [];
+
+  let n1 = Math.floor(Math.random()*4 + 3);
+
+  for (let i = 0; i < n1; i ++) {
+    let contents = [];
+    let n2 = Math.floor(Math.random()*2 + 1);
+    for (let j = 0; j < n2; j ++) {
+      contents.push(Random.cparagraph(2));
+    }
+
+    let o = {
+      image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
+      title: Random.ctitle(3, 6),
+      voice: `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
+      contents
+    }
+
+    data.push(o);
+  }
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: +new Date()
+  })
+});
+
+router.post('/small-classroom', (req, res, next) => {
+  res.send({
+    code: 200,
+    data: {
+      video_id: '5285890790782139610',
+      video_src: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4'
+    },
     message: 'success',
     timestamp: + new Date()
   });
@@ -114,17 +144,5 @@ router.post('/quiz', (req, res, next) => {
   });
 });
 
-router.post('/test', (req, res, next) => {
-  let data = {
-    img: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
-  }
-
-  res.send({
-    code: 200,
-    data: data,
-    message: 'success',
-    timestamp: +new Date()
-  })
-})
 
 module.exports = router;
