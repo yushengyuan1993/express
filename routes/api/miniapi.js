@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Mock  = require('mockjs');
-const Random = Mock.Random;
+const { Random } = Mock;
 
 router.post('/login', (req, res, next) => {
   res.send({
@@ -15,7 +15,7 @@ router.post('/login', (req, res, next) => {
   });
 });
 
-router.post('/class-room', (req, res, next) => {
+router.post('/small_classroom', (req, res, next) => {
   res.send({
     code: 200,
     data: {
@@ -69,7 +69,7 @@ router.post('/course-list', (req, res, next) => {
   });
 });
 
-router.post('/mind-map', (req, res, next) => {
+router.post('/mind-maps', (req, res, next) => {
   let data = [];
   let n1 = Math.floor(Math.random()*4 + 3);
   for(let i = 0; i < n1; i ++) {
@@ -102,7 +102,7 @@ router.post('/mind-map', (req, res, next) => {
   });
 });
 
-router.post('/pk', (req, res, next) => {
+router.post('/quiz', (req, res, next) => {
   res.send({
     code: 200,
     data: {

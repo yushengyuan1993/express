@@ -1,23 +1,16 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const app = express();
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
-/**
- * miniapp
- */
-var miniapi = require('./routes/api/miniapi');
-
-var video = require('./routes/app/video');
-var cheerio = require('./routes/cheerio');
-
-var book = require('./routes/app/book');
-
-var app = express();
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+const miniapi = require('./routes/api/miniapi');
+const video = require('./routes/app/video');
+const cheerio = require('./routes/cheerio');
+const book = require('./routes/app/book');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,24 +33,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-/**
- * miniapp
- */
 app.use('/miniapi', miniapi);
-
 app.use('/video', video)
 app.use('/book', book)
-
 app.use('/cheerio', cheerio)
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   res.status(404).render('404', { title: '你想要的东西啊~', desc: '并不存在！' });
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use((err, req, res, next) => {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
