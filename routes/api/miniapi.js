@@ -15,7 +15,7 @@ router.post('/login', (req, res, next) => {
   });
 });
 
-router.post('/small_classroom', (req, res, next) => {
+router.post('/small-classroom', (req, res, next) => {
   res.send({
     code: 200,
     data: {
@@ -27,7 +27,7 @@ router.post('/small_classroom', (req, res, next) => {
   });
 });
 
-router.post('/course_list', (req, res, next) => {
+router.post('/course-list', (req, res, next) => {
   let referer = req.headers.referer;
 
   let data = [
@@ -69,7 +69,7 @@ router.post('/course_list', (req, res, next) => {
   });
 });
 
-router.post('/mind_maps', (req, res, next) => {
+router.post('/mind-maps', (req, res, next) => {
   let data = [];
   let n1 = Math.floor(Math.random()*4 + 3);
   for(let i = 0; i < n1; i ++) {
