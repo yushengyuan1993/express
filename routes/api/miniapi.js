@@ -72,7 +72,8 @@ router.post('/happy-read', (req, res, next) => {
     let o = {
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
       title: Random.ctitle(3, 6),
-      voice: `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
+      // voice: `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
+      voice: `https://miniapi.yvshare.cn/keep/audios/3.mp3`,
       contents: [
         '山养场，三个饲养场的。',
         '场主经营得很不错，他场。'
