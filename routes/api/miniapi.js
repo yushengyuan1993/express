@@ -63,17 +63,20 @@ router.post('/happy-read', (req, res, next) => {
   let n1 = Math.floor(Math.random()*4 + 3);
 
   for (let i = 0; i < n1; i ++) {
-    let contents = [];
-    let n2 = Math.floor(Math.random()*2 + 1);
-    for (let j = 0; j < n2; j ++) {
-      contents.push(Random.cparagraph(2));
-    }
+    // let contents = [];
+    // let n2 = Math.floor(Math.random()*2 + 1);
+    // for (let j = 0; j < n2; j ++) {
+    //   contents.push(Random.cparagraph(2));
+    // }
 
     let o = {
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
       title: Random.ctitle(3, 6),
       voice: `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
-      contents
+      contents: [
+        '山养场，三个饲养场的。',
+        '场主经营得很不错，他场。'
+      ]
     }
 
     data.push(o);
