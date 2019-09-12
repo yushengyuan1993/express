@@ -179,7 +179,11 @@ router.post('/quiz', (req, res, next) => {
     for (let j = 0; j < 3; j ++) {
       let _j = j;
       ++ _j;
-      options.push(`${_j}. ${Random.csentence(5, 10)}`);
+
+      let obj = {
+        text: `${_j}. ${Random.csentence(5, 10)}`
+      }
+      options.push(obj);
     }
 
     for (let k = 0; k < npc.length; k ++) {
