@@ -177,7 +177,9 @@ router.post('/quiz', (req, res, next) => {
     let desc = Random.cparagraph(1, 3);
 
     for (let j = 0; j < 3; j ++) {
-      options.push(Random.csentence(6, 12));
+      let _j = j;
+      ++ _j;
+      options.push(`${_j}. ${Random.csentence(5, 10)}`);
     }
 
     for (let k = 0; k < npc.length; k ++) {
