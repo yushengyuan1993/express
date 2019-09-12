@@ -70,7 +70,7 @@ router.post('/happy-read', (req, res, next) => {
     // }
 	
     let arr = Mock.mock({
-      "contents|1-3": [
+      "contents|2-8": [
         '山养场，三个饲养场的。'
       ]
     });
