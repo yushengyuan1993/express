@@ -69,11 +69,11 @@ router.post('/happy-read', (req, res, next) => {
     //   contents.push(Random.cparagraph(2));
     // }
 	
-	let arr = Mock.mock({
-		"contents|1-3": [
-			'山养场，三个饲养场的。'
-		]
-	});
+    let arr = Mock.mock({
+      "contents|1-3": [
+        '山养场，三个饲养场的。'
+      ]
+    });
 	
     let o = {
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
@@ -84,7 +84,7 @@ router.post('/happy-read', (req, res, next) => {
       //  '山养场，三个饲养场的。',
       //  '场主经营得很不错，他场。'
       //],
-	  contents: arr.contents
+	    contents: arr.contents,
       points: [0, 500, 800, 1200, 1600, 2000, 2500, 2900, 3400, 3800, 4300, 4800, 5200, 5600, 6000, 6500, 6900, 7400, 7900, 8400, 8900, 9300, 9700]
     }
 
