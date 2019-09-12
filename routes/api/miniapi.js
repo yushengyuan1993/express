@@ -144,13 +144,80 @@ router.post('/mind-maps', (req, res, next) => {
   });
 });
 
+// 生成机器人
+let generateNpc = () => {
+  let npc = [];
+
+  for (let i = 0; i < 3; i ++) {
+    let o = {
+      name: Random.ctitle(2, 5),
+      avatar: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
+    }
+
+    npc.push(o);
+  }
+
+  return npc;
+}
 router.post('/quiz', (req, res, next) => {
+  let data = [];
+
+  let n1 = Math.floor(Math.random()*3 + 4);
+
+  let npc = generateNpc();
+  for (let i = 0; i < n1; i ++) {
+    let obj = {};
+
+    let level = i > 2 ? 'advanced' : 'base';
+    let question_text = Random.cparagraph(1, 2);
+    let question_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`;
+    let options = [];
+    let answers = [Math.floor(Math.random()*3)];
+    let analysis = Random.cparagraph(1, 3);
+    let desc = Random.cparagraph(1, 3);
+
+    for (let j = 0; j < 3; j ++) {
+      options.push(Random.csentence(6, 12));
+    }
+
+    for (let k = 0; k < npc.length; k ++) {
+      let item = npc[k]; // {}
+
+      if (i === 0) {
+        if (level === 'base') {
+          item.rate = Random.integer(75, 90);
+          item.speed = Random.integer(25, 35);
+        } else {
+          item.rate = Random.integer(60, 75);
+          item.speed = Random.integer(25, 35)*1.5;
+        }
+      } else if (i === 1) {
+        if (level === 'base') {
+          item.rate = Random.integer(55, 70);
+          item.speed = Random.integer(36, 45);
+        } else {
+          item.rate = Random.integer(40, 55);
+          item.speed = Random.integer(36, 45)*1.5;
+        }
+      } else {
+        if (level === 'base') {
+          item.rate = Random.integer(30, 50);
+          item.speed = Random.integer(46, 55);
+        } else {
+          item.rate = Random.integer(15, 35);
+          item.speed = Random.integer(46, 55)*1.5;
+        }
+      }
+    }
+
+    obj = { level, question_text, question_voice, options, answers, analysis, desc, npc };
+
+    data.push(obj);
+  }
+
   res.send({
     code: 200,
-    data: {
-      video_id: '5285890790782139610',
-      video_src: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4'
-    },
+    data: data,
     message: 'success',
     timestamp: +new Date()
   });
