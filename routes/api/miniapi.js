@@ -144,6 +144,55 @@ router.post('/mind-maps', (req, res, next) => {
   });
 });
 
+router.post('/test', (req, res, next) => {
+  let data = [];
+
+  let n1 = Math.floor(Math.random()*3 + 1);
+
+  for (let i = 0; i < n1; i ++) {
+
+    let n2 = Math.floor(Math.random()*3 + 3);
+    let arr2 = [];
+    for (let j = 0; j < n2; j ++) {
+      let o2 = Mock.mock({
+        "type": 'image',
+        "question_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`,
+        "analysis_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`,
+      });
+
+      if (j === 0) {
+        o2.level = 'center';
+      } else {
+        o2.level = 'branch';
+      }
+
+      let n3 = Math.floor(Math.random()*3 + 3);
+      let options = [];
+      for (let k = 0; k < n3; k ++) {
+        let o3 = Mock.mock({
+          "option": `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
+          "title": Random.ctitle(3, 6)
+        });
+        options.push(o3);
+      }
+      o2.options = options;
+
+      o2.answers = [Random.integer(1, n3)];
+
+      arr2.push(o2);
+    }
+
+    data.push(arr2);
+  }
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: + new Date()
+  });
+})
+
 // 生成机器人
 let generateNpc = () => {
   let npc = [];
@@ -158,7 +207,8 @@ let generateNpc = () => {
   }
 
   return npc;
-}
+};
+
 router.post('/quiz', (req, res, next) => {
   let data = [];
 
