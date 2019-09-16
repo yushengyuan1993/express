@@ -151,7 +151,7 @@ router.post('/mind-maps', (req, res, next) => {
 
   for (let i = 0; i < n1; i ++) {
 
-    let n2 = Math.floor(Math.random()*3 + 3);
+    let n2 = Math.floor(Math.random()*4 + 4);
     let arr2 = [];
     for (let j = 0; j < n2; j ++) {
       let o2 = Mock.mock({
