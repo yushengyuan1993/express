@@ -111,7 +111,7 @@ router.post('/small-classroom', (req, res, next) => {
   });
 });
 
-router.post('/mind-maps', (req, res, next) => {
+router.post('/test', (req, res, next) => {
   let data = [];
   let n1 = Math.floor(Math.random()*4 + 3);
   for(let i = 0; i < n1; i ++) {
@@ -144,7 +144,7 @@ router.post('/mind-maps', (req, res, next) => {
   });
 });
 
-router.post('/test', (req, res, next) => {
+router.post('/mind-maps', (req, res, next) => {
   let data = [];
 
   let n1 = Math.floor(Math.random()*3 + 1);
