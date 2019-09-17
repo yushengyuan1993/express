@@ -238,29 +238,30 @@ router.post('/quiz', (req, res, next) => {
       let item = npc[k]; // {}
 
       item.speed = Random.integer(3, 8);
+      item.rate = Random.integer(15, 90);
 
       if (i === 0) {
         if (level === 'base') {
-          item.rate = Random.integer(75, 90);
+          // item.rate = Random.integer(75, 90);
           // item.speed = Random.integer(25, 35);
         } else {
-          item.rate = Random.integer(60, 75);
+          // item.rate = Random.integer(60, 75);
           // item.speed = Random.integer(25, 35)*1.5;
         }
       } else if (i === 1) {
         if (level === 'base') {
-          item.rate = Random.integer(55, 70);
+          // item.rate = Random.integer(55, 70);
           // item.speed = Random.integer(36, 45);
         } else {
-          item.rate = Random.integer(40, 55);
+          // item.rate = Random.integer(40, 55);
           // item.speed = Random.integer(36, 45)*1.5;
         }
       } else {
         if (level === 'base') {
-          item.rate = Random.integer(30, 50);
+          // item.rate = Random.integer(30, 50);
           // item.speed = Random.integer(46, 55);
         } else {
-          item.rate = Random.integer(15, 35);
+          // item.rate = Random.integer(15, 35);
           // item.speed = Random.integer(46, 55)*1.5;
         }
       }
