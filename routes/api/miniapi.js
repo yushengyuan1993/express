@@ -230,10 +230,8 @@ router.post('/quiz', (req, res, next) => {
       let _j = j;
       ++ _j;
 
-      let obj = {
-        text: `${_j}. ${Random.csentence(5, 10)}`
-      }
-      options.push(obj);
+      let text = `${_j}. ${Random.csentence(5, 10)}`;
+      options.push(text);
     }
 
     for (let k = 0; k < npc.length; k ++) {
