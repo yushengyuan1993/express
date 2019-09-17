@@ -237,7 +237,7 @@ router.post('/quiz', (req, res, next) => {
     for (let k = 0; k < npc.length; k ++) {
       let item = npc[k]; // {}
 
-      item.speed = Random.integer(3, 8);
+      item.speed = Random.integer(6, 12);
       item.rate = Random.integer(15, 90);
 
       if (i === 0) {
