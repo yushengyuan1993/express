@@ -239,7 +239,7 @@ router.post('/quiz', (req, res, next) => {
     for (let k = 0; k < npc.length; k ++) {
       let item = npc[k]; // {}
 
-      item.speed = Random.integer(3, 5);
+      item.speed = Random.integer(3, 8);
 
       if (i === 0) {
         if (level === 'base') {
