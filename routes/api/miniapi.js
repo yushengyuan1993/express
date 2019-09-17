@@ -156,8 +156,8 @@ router.post('/mind-maps', (req, res, next) => {
     for (let j = 0; j < n2; j ++) {
       let o2 = Mock.mock({
         "type": 'image',
-        "question_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`,
-        "analysis_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`,
+        "question_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
+        "analysis_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
       });
 
       if (j === 0) {
@@ -220,7 +220,7 @@ router.post('/quiz', (req, res, next) => {
 
     let level = i > 2 ? 'advanced' : 'base';
     let question_text = Random.cparagraph(1, 2);
-    let question_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(0, 2)}.mp3`;
+    let question_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`;
     let options = [];
     let answers = [Math.floor(Math.random()*3)];
     let analysis = Random.cparagraph(1, 3);
