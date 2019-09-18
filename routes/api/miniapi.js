@@ -63,29 +63,34 @@ router.post('/happy-read', (req, res, next) => {
   let n1 = Math.floor(Math.random()*4 + 3);
 
   for (let i = 0; i < n1; i ++) {
-    // let contents = [];
-    // let n2 = Math.floor(Math.random()*2 + 1);
-    // for (let j = 0; j < n2; j ++) {
-    //   contents.push(Random.cparagraph(2));
-    // }
-	
-    let arr = Mock.mock({
-      "contents|2-8": [
-        '山养场，三个饲养场的。'
-      ]
-    });
-	
+    
+    let n2 = Math.floor(Math.random()*3 + 3);
+    let arr = [];
+    for (let j = 0; j < n2; j ++) {
+      arr.push(Random.cparagraph(1, 3))
+    }
+
+    let points = [];
+    switch (n2) {
+      case 3:
+        points = [0, 7, 16];
+        break;
+      case 4:
+        points = [0, 6, 12, 18];
+        break;
+      case 5:
+        points = [0, 5, 10, 15, 20];
+        break;
+      default:
+        break;
+    }
+
     let o = {
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
       title: Random.ctitle(3, 6),
-      // voice: `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
-      voice: `https://miniapi.yvshare.cn/keep/audios/3.mp3`,
-      //contents: [
-      //  '山养场，三个饲养场的。',
-      //  '场主经营得很不错，他场。'
-      //],
-	    contents: arr.contents,
-      points: [0, 500, 800, 1200, 1600, 2000, 2500, 2900, 3400, 3800, 4300, 4800, 5200, 5600, 6000, 6500, 6900, 7400, 7900, 8400, 8900, 9300, 9700]
+      voice: `https://miniapi.yvshare.cn/keep/audios/test.mp3`,
+	    contents: arr,
+      points: points
     }
 
     data.push(o);
