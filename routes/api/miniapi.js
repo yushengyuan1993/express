@@ -212,7 +212,8 @@ let generateNpc = () => {
 router.post('/quiz', (req, res, next) => {
   let data = [];
 
-  let n1 = Math.floor(Math.random()*3 + 4);
+  // let n1 = Math.floor(Math.random()*3 + 4);
+  let n1 = 5;
 
   let npc = generateNpc();
   for (let i = 0; i < n1; i ++) {
@@ -277,6 +278,34 @@ router.post('/quiz', (req, res, next) => {
     data: data,
     message: 'success',
     timestamp: +new Date()
+  });
+});
+
+router.post('/get-npc', (req, res, next) => {
+  let data = [];
+
+  let npc = generateNpc();
+
+  for (let i = 0; i < 5; i ++) {
+    let arr = [];
+    
+    for (let k = 0; k < npc.length; k ++) {
+      let item = npc[k]; // {}
+
+      item.speed = Random.integer(6, 12);
+      item.rate = Random.integer(35, 90);
+
+      arr.push(item);
+    }
+
+    data.push(arr);
+  }
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: + new Date()
   });
 });
 
