@@ -117,12 +117,77 @@ router.post('/happy-read', (req, res, next) => {
 });
 
 router.post('/small-classroom', (req, res, next) => {
+  let data = [];
+
+  let contents = [];
+  for (let i = 0; i < Random.integer(3, 8); i ++) {
+    contents.push(Random.cparagraph(1, 3));
+  }
+
+  let mind_map_images = [];
+  for (let i = 0; i < Random.integer(1, 3); i ++) {
+    mind_map_images.push(`https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`);
+  }
+
+  let questions = [];
+  for (let i = 0; i < 4; i ++) {
+    let _i = i;
+    let sort =  ++ _i;
+
+    let o = {};
+
+    let type = (i % 2) === 0 ? 'voice': 'select';
+
+    let node_time = 0;
+    switch (i) {
+      case 0:
+        node_time = 6;
+        break;
+      case 1:
+        node_time = 12;
+        break;
+      case 2:
+        node_time = 18;
+        break;
+      case 3:
+        node_time = 24
+        break;
+      default:
+        break;
+    }
+
+    let question_text = type === 'voice' ? '' : Random.cparagraph(1, 3);
+    let question_voice = type === 'voice' ? '' : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
+    let desc = Random.cparagraph(1, 3);
+
+    let options = [];
+    let answers = [];
+
+    if (type === 'select') {
+      for (let j = 0; j < 4; j ++) {
+        options.push(Random.cparagraph(1, 2));
+      }
+
+      answers.push(Random.integer(1, 4));
+    }
+
+    o = { type, sort, node_time, question_text, question_voice, options, answers, desc };
+
+    questions.push(o);
+  }
+
+  let obj = {
+    type: '阅读技巧',
+    video: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4',
+    contents,
+    mind_map_images,
+    questions
+  };
+  data.push(obj);
+
   res.send({
     code: 200,
-    data: {
-      video_id: '5285890790782139610',
-      video_src: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4'
-    },
+    data: data,
     message: 'success',
     timestamp: + new Date()
   });
