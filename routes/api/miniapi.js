@@ -65,21 +65,21 @@ router.post('/happy-read', (req, res, next) => {
   for (let i = 0; i < n1; i ++) {
     
     let n2 = Math.floor(Math.random()*3 + 3);
-    let arr = [];
+    let contents = [];
     for (let j = 0; j < n2; j ++) {
-      arr.push(Random.cparagraph(1, 3))
+      contents.push(Random.cparagraph(1, 3))
     }
 
-    let points = [];
+    let node_times = [];
     switch (n2) {
       case 3:
-        points = [0, 7, 16];
+        node_times = [0, 7, 16];
         break;
       case 4:
-        points = [0, 6, 12, 18];
+        node_times = [0, 6, 12, 18];
         break;
       case 5:
-        points = [0, 5, 10, 15, 20];
+        node_times = [0, 5, 10, 15, 20];
         break;
       default:
         break;
@@ -89,12 +89,12 @@ router.post('/happy-read', (req, res, next) => {
     let footer = i === (n1 - 1) ? ( '—— 《' + Random.ctitle(3, 6) + '》' ) : '';
 
     let o = {
+      title,
+	    contents,
+      node_times,
+      footer,
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
-      title: title,
-      voice: `https://miniapi.yvshare.cn/keep/audios/test.mp3`,
-	    contents: arr,
-      node_times: points,
-      footer: footer
+      voice: `https://miniapi.yvshare.cn/keep/audios/test.mp3`
     }
 
     data.push(o);
