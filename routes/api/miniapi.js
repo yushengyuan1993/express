@@ -85,12 +85,16 @@ router.post('/happy-read', (req, res, next) => {
         break;
     }
 
+    let title = i === 0 ? Random.ctitle(3, 6) : null;
+    let footer = i === (n1 - 1) ? ( '———— 《' + Random.ctitle(3, 6) + '》' ) : null;
+
     let o = {
       image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
-      title: Random.ctitle(3, 6),
+      title: title,
       voice: `https://miniapi.yvshare.cn/keep/audios/test.mp3`,
 	    contents: arr,
-      points: points
+      node_times: points,
+      footer: footer
     }
 
     data.push(o);
