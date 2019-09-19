@@ -60,7 +60,7 @@ router.post('/course-list', (req, res, next) => {
 router.post('/happy-read', (req, res, next) => {
   let data = [];
 
-  let n1 = Math.floor(Math.random()*4 + 3);
+  let n1 = Math.floor(Math.random()*4 + 6);
 
   for (let i = 0; i < n1; i ++) {
     
@@ -85,8 +85,15 @@ router.post('/happy-read', (req, res, next) => {
         break;
     }
 
-    let title = i === 0 ? Random.ctitle(3, 6) : '';
-    let footer = i === (n1 - 1) ? ( '—— 《' + Random.ctitle(3, 6) + '》' ) : '';
+    let title = '';
+    if (i === 0 || i === 3) {
+      title = Random.ctitle(3, 6);
+    }
+
+    let footer = '';
+    if (i === 2 || i === (n1 - 1)) {
+      footer = '—— 《' + Random.ctitle(3, 6) + '》';
+    }
 
     let o = {
       title,
