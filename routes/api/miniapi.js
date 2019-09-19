@@ -88,6 +88,7 @@ router.post('/happy-read', (req, res, next) => {
     let title = '';
     if (i === 0 || i === 3) {
       title = Random.ctitle(3, 6);
+      node_times[0] = 2;
     }
 
     let footer = '';
