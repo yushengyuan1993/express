@@ -121,7 +121,7 @@ router.post('/small-classroom', (req, res, next) => {
 
   let type = req.body.type;
 
-  let video = type === 'read' ? 'https://miniapi.yvshare.cn/videos/1.mp4' : 'https://miniapi.yvshare.cn/videos/2.mp4';
+  let video = type === 'read' ? 'https://miniapi.yvshare.cn/videos/2.mp4' : 'https://miniapi.yvshare.cn/videos/1.mp4';
 
   let contents = [];
   for (let i = 0; i < Random.integer(3, 8); i ++) {
