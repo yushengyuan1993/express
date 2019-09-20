@@ -121,7 +121,8 @@ router.post('/small-classroom', (req, res, next) => {
 
   let _type = req.body.type;
 
-  let video = _type === 'read' ? 'http://1254368367.vod2.myqcloud.com/78d1c9ccvodgzp1254368367/7f8c8b345285890794193271186/9c4sOAadqogA.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
+  // let video = _type === 'read' ? 'http://1254368367.vod2.myqcloud.com/78d1c9ccvodgzp1254368367/7f8c8b345285890794193271186/9c4sOAadqogA.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
+  let video = _type === 'read' ? 'https://miniapi.yvshare.cn/videos/3.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
 
   let contents = [];
   for (let i = 0; i < Random.integer(3, 8); i ++) {
