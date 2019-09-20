@@ -119,9 +119,9 @@ router.post('/happy-read', (req, res, next) => {
 router.post('/small-classroom', (req, res, next) => {
   let data = [];
 
-  let type = req.body.type;
+  let _type = req.body.type;
 
-  let video = type === 'read' ? 'https://miniapi.yvshare.cn/videos/2.mp4' : 'https://miniapi.yvshare.cn/videos/1.mp4';
+  let video = _type === 'read' ? 'https://miniapi.yvshare.cn/videos/2.mp4' : 'https://miniapi.yvshare.cn/videos/1.mp4';
 
   let contents = [];
   for (let i = 0; i < Random.integer(3, 8); i ++) {
@@ -141,13 +141,20 @@ router.post('/small-classroom', (req, res, next) => {
     let o = {};
 
     // let type = (i % 2) === 0 ? 'voice': 'select';
-    let type = 'select';
+    // let type = 'select';
+    let type = null;
+
+    if (_type === 'read') {
+      type = 'voice';
+    } else {
+      type = (i % 2) === 0 ? 'voice': 'select';
+    }
 
     let node_time = 0;
     switch (i) {
       case 0:
         // node_time = 6;
-        node_time = 2;
+        node_time = 3;
         break;
       case 1:
         node_time = 12;
