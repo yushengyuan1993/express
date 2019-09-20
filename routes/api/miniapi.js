@@ -119,6 +119,10 @@ router.post('/happy-read', (req, res, next) => {
 router.post('/small-classroom', (req, res, next) => {
   let data = [];
 
+  let type = req.body.type;
+
+  let video = type === 'read' ? 'https://miniapi.yvshare.cn/videos/1.mp4' : 'https://miniapi.yvshare.cn/videos/2.mp4';
+
   let contents = [];
   for (let i = 0; i < Random.integer(3, 8); i ++) {
     contents.push(Random.cparagraph(1, 3));
@@ -180,7 +184,7 @@ router.post('/small-classroom', (req, res, next) => {
 
   let obj = {
     type: '阅读技巧',
-    video: 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4',
+    video: video,
     contents,
     mind_map_images,
     questions
