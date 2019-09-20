@@ -136,12 +136,14 @@ router.post('/small-classroom', (req, res, next) => {
 
     let o = {};
 
-    let type = (i % 2) === 0 ? 'voice': 'select';
+    // let type = (i % 2) === 0 ? 'voice': 'select';
+    let type = 'select';
 
     let node_time = 0;
     switch (i) {
       case 0:
-        node_time = 6;
+        // node_time = 6;
+        node_time = 2;
         break;
       case 1:
         node_time = 12;
@@ -150,7 +152,7 @@ router.post('/small-classroom', (req, res, next) => {
         node_time = 18;
         break;
       case 3:
-        node_time = 24
+        node_time = 24;
         break;
       default:
         break;
