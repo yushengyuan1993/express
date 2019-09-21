@@ -124,7 +124,6 @@ router.post('/happy-read', (req, res, next) => {
 });
 
 const generateSmallClassRoom = (req) => {
-  let data = [];
 
   let _type = req ? req.body.type : 'read';
 
@@ -203,9 +202,8 @@ const generateSmallClassRoom = (req) => {
     mind_map_images,
     questions
   };
-  data.push(obj);
 
-  return data;
+  return obj;
 }
 router.post('/small-classroom', (req, res, next) => {
   
@@ -452,7 +450,7 @@ router.post('/calendar', (req, res, next) => {
   let happy_read = generateHappyReadData();
   let mind_maps = generateMindMapData()
   let quiz = generateQuizData();
-  let small_classroom = generateSmallClassRoom();
+  let small_classroom = generateSmallClassRoom(req);
 
   let data = { title, happy_read, mind_maps, quiz, small_classroom };
 
