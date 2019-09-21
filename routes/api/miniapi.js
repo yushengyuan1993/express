@@ -57,7 +57,8 @@ router.post('/course-list', (req, res, next) => {
   });
 });
 
-router.post('/happy-read', (req, res, next) => {
+
+const generateHappyReadData = () => {
   let data = [];
 
   let n1 = Math.floor(Math.random()*4 + 6);
@@ -108,6 +109,12 @@ router.post('/happy-read', (req, res, next) => {
     data.push(o);
   }
 
+  return data;
+}
+router.post('/happy-read', (req, res, next) => {
+
+  let data = generateHappyReadData();
+
   res.send({
     code: 200,
     data: data,
@@ -116,12 +123,11 @@ router.post('/happy-read', (req, res, next) => {
   })
 });
 
-router.post('/small-classroom', (req, res, next) => {
+const generateSmallClassRoom = (req) => {
   let data = [];
 
-  let _type = req.body.type;
+  let _type = req ? req.body.type : 'read';
 
-  // let video = _type === 'read' ? 'http://1254368367.vod2.myqcloud.com/78d1c9ccvodgzp1254368367/7f8c8b345285890794193271186/9c4sOAadqogA.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
   let video = _type === 'read' ? 'https://miniapi.yvshare.cn/videos/3.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
 
   let contents = [];
@@ -199,6 +205,12 @@ router.post('/small-classroom', (req, res, next) => {
   };
   data.push(obj);
 
+  return data;
+}
+router.post('/small-classroom', (req, res, next) => {
+  
+  let data = generateSmallClassRoom(req);
+
   res.send({
     code: 200,
     data: data,
@@ -240,7 +252,7 @@ router.post('/test', (req, res, next) => {
   });
 });
 
-router.post('/mind-maps', (req, res, next) => {
+const generateMindMapData = () => {
   let data = [];
 
   let n1 = Math.floor(Math.random()*3 + 1);
@@ -281,6 +293,12 @@ router.post('/mind-maps', (req, res, next) => {
     data.push(arr2);
   }
 
+  return data;
+}
+router.post('/mind-maps', (req, res, next) => {
+  
+  let data = generateMindMapData();
+
   res.send({
     code: 200,
     data: data,
@@ -290,7 +308,7 @@ router.post('/mind-maps', (req, res, next) => {
 })
 
 // 生成机器人
-let generateNpc = () => {
+const generateNpc = () => {
   let npc = [];
 
   for (let i = 0; i < 3; i ++) {
@@ -305,7 +323,7 @@ let generateNpc = () => {
   return npc;
 };
 
-router.post('/quiz', (req, res, next) => {
+const generateQuizData = () => {
   let data = [];
 
   // let n1 = Math.floor(Math.random()*3 + 4);
@@ -369,6 +387,12 @@ router.post('/quiz', (req, res, next) => {
     data.push(obj);
   }
 
+  return data;
+}
+router.post('/quiz', (req, res, next) => {
+  
+  let data = generateQuizData();
+
   res.send({
     code: 200,
     data: data,
@@ -418,7 +442,27 @@ router.post('/upload-homework', (req, res, next) => {
     message: 'success',
     timestamp: + new Date()
   })
-})
+});
+
+// 课时数据
+router.post('/calendar', (req, res, next) => {
+
+  let title = '开学第一课';
+
+  let happy_read = generateHappyReadData();
+  let mind_maps = generateMindMapData()
+  let quiz = generateQuizData();
+  let small_classroom = generateSmallClassRoom();
+
+  let data = { title, happy_read, mind_maps, quiz, small_classroom };
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: +new Date()
+  })
+});
 
 
 module.exports = router;
