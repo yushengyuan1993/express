@@ -319,7 +319,7 @@ router.post('/quiz', (req, res, next) => {
     let question_text = Random.cparagraph(1, 2);
     let question_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`;
     let options = [];
-    let answers = [Math.floor(Math.random()*3)];
+    let answers = [1];
     let analysis = Random.cparagraph(1, 3);
     let desc = Random.cparagraph(1, 3);
 
@@ -364,7 +364,7 @@ router.post('/quiz', (req, res, next) => {
       }
     }
 
-    obj = { level, question_text, question_voice, options, answers, analysis, desc, npc };
+    obj = { level, question_text, question_voice, options, answers, analysis, desc };
 
     data.push(obj);
   }
@@ -404,6 +404,21 @@ router.post('/get-npc', (req, res, next) => {
     timestamp: + new Date()
   });
 });
+
+// 提交答题数据
+// step 1/2/3/4
+router.post('/upload-homework', (req, res, next) => {
+  let body = req.body;
+
+  console.log(body);
+
+  res.send({
+    code:200,
+    data: {},
+    message: 'success',
+    timestamp: + new Date()
+  })
+})
 
 
 module.exports = router;
