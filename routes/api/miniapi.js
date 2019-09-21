@@ -87,7 +87,7 @@ const generateSmallClassRoom = (req) => {
   let video = _type === 'read' ? 'https://miniapi.yvshare.cn/videos/3.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
 
   let contents = [];
-  for (let i = 0; i < Random.integer(3, 8); i ++) {
+  for (let i = 0; i < Random.integer(4, 8); i ++) {
     contents.push(Random.cparagraph(1, 3));
   }
 
@@ -97,7 +97,7 @@ const generateSmallClassRoom = (req) => {
   }
 
   let questions = [];
-  for (let i = 0; i < 4; i ++) {
+  for (let i = 0; i < 2; i ++) {
     let _i = i;
     let sort =  ++ _i;
 
@@ -120,7 +120,7 @@ const generateSmallClassRoom = (req) => {
         node_time = 3;
         break;
       case 1:
-        node_time = 12;
+        node_time = 6;
         break;
       case 2:
         node_time = 18;
@@ -349,6 +349,20 @@ router.post('/get-npc', (req, res, next) => {
     message: 'success',
     timestamp: + new Date()
   });
+});
+
+// 上传录音
+router.post('/upload-attachment', (req, res, next) => {
+  let body = req.body;
+
+  console.log(body);
+
+  res.send({
+    code:200,
+    data: {},
+    message: 'success',
+    timestamp: + new Date()
+  })
 });
 
 // 提交答题数据
