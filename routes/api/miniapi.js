@@ -382,15 +382,27 @@ router.post('/upload-homework', (req, res, next) => {
 
 // 课时数据
 router.post('/calendar', (req, res, next) => {
-
+  let data = {};
+  
+  let period_content = {};
   let title = '开学第一课';
-
   let happy_read = generateHappyReadData();
   let mind_maps = generateMindMapData()
   let quiz = generateQuizData();
   let small_classroom = generateSmallClassRoom(req);
+  let first_step = { title, happy_read, mind_maps, quiz, small_classroom };
+  period_content.first_step = first_step;
+  period_content.course_img = '';
+  period_content.type = 'read'; // read/write
 
-  let data = { title, happy_read, mind_maps, quiz, small_classroom };
+  let lesson_period = generateLessonPeriod();
+
+  let student_id = 8;
+  let course_id = Random.integer(888, 8888);
+  let course_name = Random.ctitle(4, 6);
+
+
+  data = { period_content, lesson_period, student_id, course_id, course_name };
 
   res.send({
     code: 200,
@@ -400,5 +412,37 @@ router.post('/calendar', (req, res, next) => {
   })
 });
 
+// 生成 lesson_period 数据
+const generateLessonPeriod = () => {
+  let data = [];
+
+  let n = Random.integer(1, 4);
+
+  for (let i = 0; i < n; i++) {
+    let obj = {};
+
+    let _i = i;
+    ++ _i;
+
+    obj.star = Random.integer(1, 3);
+    obj.step_type = _i;
+    obj.id = Random.integer(111, 999);
+
+    data.push(obj);
+  }
+
+  return data;
+}
+
+router.get('/test', (req, res, next) => {
+  let data = generateLessonPeriod();
+
+  res.send({
+    code: 200,
+    data: data,
+    message: 'success',
+    timestamp: +new Date()
+  })
+})
 
 module.exports = router;
