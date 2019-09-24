@@ -78,4 +78,4 @@ typings/
 1_miniapi.yvshare.cn_bundle.crt
 2_miniapi.yvshare.cn.key
 package-lock.json
-
+routes/api/config.js

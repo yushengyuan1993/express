@@ -2,14 +2,12 @@ const express = require('express');
 const router = express.Router();
 const Mock  = require('mockjs');
 const { Random } = Mock;
+const config = require('./config');
 
 router.post('/mini-app-login', (req, res, next) => {
   res.send({
-    code: 200,
-    data: {
-      name: 'yushare',
-      age: 18
-    },
+    code: 0,
+    data: config.userinfo,
     message: 'success',
     timestamp: + new Date()
   });
@@ -73,7 +71,7 @@ router.post('/happy-read', (req, res, next) => {
   let data = generateHappyReadData();
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: +new Date()
@@ -167,7 +165,7 @@ router.post('/small-classroom', (req, res, next) => {
   let data = generateSmallClassRoom(req);
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: + new Date()
@@ -222,7 +220,7 @@ router.post('/mind-maps', (req, res, next) => {
   let data = generateMindMapData();
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: + new Date()
@@ -316,7 +314,7 @@ router.post('/quiz', (req, res, next) => {
   let data = generateQuizData();
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: +new Date()
@@ -344,7 +342,7 @@ router.post('/quiz-robot-info', (req, res, next) => {
   }
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: + new Date()
@@ -358,7 +356,7 @@ router.post('/upload-file', (req, res, next) => {
   console.log(body);
 
   res.send({
-    code:200,
+    code: 0,
     data: {
       path: body.file
     },
@@ -375,7 +373,7 @@ router.post('/upload-homework', (req, res, next) => {
   console.log(body);
 
   res.send({
-    code:200,
+    code: 0,
     data: {},
     message: 'success',
     timestamp: + new Date()
@@ -393,9 +391,13 @@ router.post('/calendar', (req, res, next) => {
   let quiz = generateQuizData();
   let small_classroom = generateSmallClassRoom(req);
   let first_step = { title, happy_read, mind_maps, quiz, small_classroom };
+  first_step = JSON.stringify(first_step);
   period_content.first_step = first_step;
-  period_content.course_img = '';
+  period_content.course_img = `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`;
   period_content.type = 'read'; // read/write
+  period_content.lesson_title = Random.ctitle(4, 7);
+  period_content.lesson_desc = Random.cparagraph(1, 2);
+  period_content.lesson_day = Random.integer(1, 5);
 
   let lesson_period = generateLessonPeriod();
 
@@ -407,7 +409,7 @@ router.post('/calendar', (req, res, next) => {
   data = { period_content, lesson_period, student_id, course_id, course_name };
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: +new Date()
@@ -440,7 +442,7 @@ router.get('/test', (req, res, next) => {
   let data = generateLessonPeriod();
 
   res.send({
-    code: 200,
+    code: 0,
     data: data,
     message: 'success',
     timestamp: +new Date()
