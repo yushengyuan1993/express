@@ -97,14 +97,15 @@ const generateSmallClassRoom = (req) => {
   }
 
   let questions = [];
-  for (let i = 0; i < 2; i ++) {
+  let n2 = _type === 'read' ? 2 : 4;
+  for (let i = 0; i < n2; i ++) {
     let _i = i;
     let sort =  ++ _i;
 
     let o = {};
 
     // let type = (i % 2) === 0 ? 'voice': 'select';
-    // let type = 'select';
+    // // let type = 'select';
     let type = null;
 
     if (_type === 'read') {
@@ -116,17 +117,16 @@ const generateSmallClassRoom = (req) => {
     let node_time = 0;
     switch (i) {
       case 0:
-        // node_time = 6;
         node_time = 3;
         break;
       case 1:
         node_time = 6;
         break;
       case 2:
-        node_time = 18;
+        node_time = 9;
         break;
       case 3:
-        node_time = 24;
+        node_time = 12;
         break;
       default:
         break;
@@ -141,10 +141,10 @@ const generateSmallClassRoom = (req) => {
 
     if (type === 'select') {
       for (let j = 0; j < 4; j ++) {
-        options.push(Random.cparagraph(1, 2));
+        options.push(Random.ctitle(8, 15));
       }
 
-      answers.push(Random.integer(1, 4));
+      answers.push(Random.integer(1, 2));
     }
 
     o = { type, sort, node_time, question_text, question_voice, options, answers, desc };
