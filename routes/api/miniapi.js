@@ -3,7 +3,7 @@ const router = express.Router();
 const Mock  = require('mockjs');
 const { Random } = Mock;
 
-router.post('/login', (req, res, next) => {
+router.post('/mini-app-login', (req, res, next) => {
   res.send({
     code: 200,
     data: {
@@ -323,7 +323,7 @@ router.post('/quiz', (req, res, next) => {
   });
 });
 
-router.post('/get-npc', (req, res, next) => {
+router.post('/quiz-robot-info', (req, res, next) => {
   let data = [];
 
   let npc = generateNpc();
@@ -352,14 +352,16 @@ router.post('/get-npc', (req, res, next) => {
 });
 
 // 上传录音
-router.post('/upload-attachment', (req, res, next) => {
+router.post('/upload-file', (req, res, next) => {
   let body = req.body;
 
   console.log(body);
 
   res.send({
     code:200,
-    data: {},
+    data: {
+      path: body.file
+    },
     message: 'success',
     timestamp: + new Date()
   })
