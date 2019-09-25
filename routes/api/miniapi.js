@@ -326,7 +326,7 @@ router.post('/quiz-robot-info', (req, res, next) => {
 
   let npc = generateNpc();
 
-  for (let i = 0; i < 5; i ++) {
+  for (let i = 0; i < 8; i ++) {
     let arr = [];
     
     for (let k = 0; k < npc.length; k ++) {
