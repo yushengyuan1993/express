@@ -401,12 +401,25 @@ router.post('/calendar', (req, res, next) => {
 
   let lesson_period = generateLessonPeriod();
 
-  let student_id = 8;
-  let course_id = Random.integer(888, 8888);
+  let student_id = 1111310027;
+  let course_id = 1000014;
   let course_name = Random.ctitle(4, 6);
+  let special_id = 1000011;
+  let lesson_period_id = 1000732;
+  let lesson_count = 0;
+  let learned_lesson_count = 0;
 
-
-  data = { period_content, lesson_period, student_id, course_id, course_name };
+  data = {
+    period_content,
+    lesson_period,
+    student_id,
+    course_id,
+    course_name,
+    special_id,
+    lesson_period_id,
+    lesson_count,
+    learned_lesson_count
+  };
 
   res.send({
     code: 0,
