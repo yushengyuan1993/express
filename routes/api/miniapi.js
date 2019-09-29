@@ -130,8 +130,8 @@ const generateSmallClassRoom = (req) => {
         break;
     }
 
-    let question_text = type === 'voice' ? '' : Random.cparagraph(1, 3);
-    let question_voice = type === 'voice' ? '' : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
+    let question_text = type === 'voice' ? Random.cparagraph(1) : Random.cparagraph(2, 3);
+    let question_voice = type === 'voice' ? `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png` : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
     let desc = Random.cparagraph(1, 3);
 
     let options = [];
