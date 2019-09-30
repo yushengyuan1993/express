@@ -109,7 +109,8 @@ const generateSmallClassRoom = (req) => {
     if (_type === 'read') {
       type = 'voice';
     } else {
-      type = (i % 2) === 0 ? 'voice': 'select';
+      // type = (i % 2) === 0 ? 'voice': 'select';
+      type = (i % 2) === 0 ? 'select': 'voice';
     }
 
     let node_time = 0;
@@ -134,6 +135,8 @@ const generateSmallClassRoom = (req) => {
     let question_voice = type === 'voice' ? `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png` : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
     let desc = Random.cparagraph(1, 3);
 
+    let question_content = Random.cparagraph(2, 3);
+
     let options = [];
     let answers = [];
 
@@ -145,7 +148,7 @@ const generateSmallClassRoom = (req) => {
       answers.push(Random.integer(1, 2));
     }
 
-    o = { type, sort, node_time, question_text, question_voice, options, answers, desc };
+    o = { type, sort, node_time, question_text, question_voice, question_content, options, answers, desc };
 
     questions.push(o);
   }
