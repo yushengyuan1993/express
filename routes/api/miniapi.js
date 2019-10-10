@@ -133,6 +133,7 @@ const generateSmallClassRoom = (req) => {
 
     let question_text = type === 'voice' ? Random.cparagraph(1) : Random.cparagraph(2, 3);
     let question_voice = type === 'voice' ? `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png` : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
+    let analysis_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`;
     let desc = Random.cparagraph(1, 3);
 
     let question_content = Random.cparagraph(2, 3);
@@ -148,7 +149,7 @@ const generateSmallClassRoom = (req) => {
       answers.push(Random.integer(1, 2));
     }
 
-    o = { type, sort, node_time, question_text, question_voice, question_content, options, answers, desc };
+    o = { type, sort, node_time, question_text, question_voice, analysis_voice, question_content, options, answers, desc };
 
     questions.push(o);
   }
