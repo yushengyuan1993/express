@@ -16,4 +16,17 @@ router.post('/v-1111', (req, res, next) => {
   })
 })
 
+router.post('/today-step', (req, res, next) => {
+  console.log(req.body);
+
+  res.send({
+    code: 0,
+    data: {
+      
+    },
+    message: 'success',
+    timestamp: + new Date()
+  })
+})
+
 module.exports = router
