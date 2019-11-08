@@ -22,7 +22,8 @@ router.post('/today-step', (req, res, next) => {
   res.send({
     code: 0,
     data: {
-      
+      add_carrot: 12,
+      step_carrot: 12
     },
     message: 'success',
     timestamp: + new Date()
