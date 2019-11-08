@@ -30,4 +30,15 @@ router.post('/today-step', (req, res, next) => {
   })
 })
 
+router.post('/calendar', (req, res, next) => {
+  console.log(req.body);
+
+  res.send({
+    code: 0,
+    data: {},
+    message: 'success',
+    timestamp: + new Date()
+  })
+})
+
 module.exports = router
