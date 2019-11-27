@@ -9,6 +9,7 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const miniapi = require('./routes/api/miniapi');
 const activity = require('./routes/api/activity');
+const error_catch = require('./routes/api/error-catch');
 const video = require('./routes/app/video');
 const cheerio = require('./routes/cheerio');
 const book = require('./routes/app/book');
@@ -37,6 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/miniapi', miniapi);
 app.use('/activity', activity);
+app.use('/catch', error_catch);
 app.use('/video', video)
 app.use('/book', book)
 app.use('/cheerio', cheerio)
