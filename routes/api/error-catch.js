@@ -3,13 +3,11 @@ const router = express.Router();
 
 router.post('/catch', (req, res, next) => {
 
-  console.log(req.body);
+  console.log(req);
 
   res.send({
     code: 0,
-    data: {
-      name: 'yushare'
-    },
+    data: {},
     message: 'success',
     timestamp: + new Date()
   })
