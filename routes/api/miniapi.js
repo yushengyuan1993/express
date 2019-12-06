@@ -474,7 +474,8 @@ const generateHappyReadFollow = () => {
     data: {
       follow: {
         haoci: {
-          voice: 'http://localhost:3003/keep/audios/1.mp3',
+          voice: 'https://miniapi.yvshare.cn/keep/audios/1.mp3',
+          // voice: 'http://localhost:3003/keep/audios/1.mp3',
           words: [
             {
               text: ['明媚'],
@@ -491,7 +492,8 @@ const generateHappyReadFollow = () => {
           ]
         },
         haoju: {
-          voice: 'http://localhost:3003/keep/audios/2.mp3',
+          voice: 'https://miniapi.yvshare.cn/keep/audios/2.mp3',
+          // voice: 'http://localhost:3003/keep/audios/2.mp3',
           sentence: [
             {
               text: ['玉不琢。玉不琢，不成器。人不学，不知义。'],
