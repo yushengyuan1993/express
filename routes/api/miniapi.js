@@ -479,15 +479,15 @@ const generateHappyReadFollow = () => {
           words: [
             {
               text: ['明媚'],
-              point: [1, 2],
+              point: 0,
             },
             {
               text: ['暖意'],
-              point: [3, 4],
+              point: 3,
             },
             {
               text: ['大帝出征', '详细信息'],
-              point: [6, 8],
+              point: 6,
             },
           ]
         },
@@ -497,7 +497,7 @@ const generateHappyReadFollow = () => {
           sentence: [
             {
               text: ['玉不琢。玉不琢，不成器。人不学，不知义。'],
-              point: null,
+              point: 0,
             }
           ]
         }
