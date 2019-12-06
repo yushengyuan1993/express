@@ -467,4 +467,46 @@ router.get('/test', (req, res, next) => {
   })
 })
 
+// 真题阅读 跟读部分
+const generateHappyReadFollow = () => {
+  return {
+    code: 0,
+    data: {
+      follow: {
+        haoci: {
+          voice: 'https://miniapi.yvshare.cn/videos/1.mp4',
+          words: [
+            {
+              text: ['明媚'],
+              point: [1, 2],
+            },
+            {
+              text: ['暖意'],
+              point: [3, 4],
+            },
+            {
+              text: ['大帝出征', '详细信息'],
+              point: [6, 8],
+            },
+          ]
+        },
+        haoju: {
+          voice: 'https://miniapi.yvshare.cn/videos/2.mp4',
+          sentence: [
+            {
+              text: ['玉不琢。玉不琢，不成器。人不学，不知义。'],
+              point: null,
+            }
+          ]
+        }
+      }
+    },
+    message: 'success',
+    timestamp: +new Date()
+  }
+}
+router.get('/happy-read-follow', (req, res, next) => {
+  res.send(generateHappyReadFollow());
+})
+
 module.exports = router;
