@@ -497,7 +497,7 @@ const generateHappyReadFollow = () => {
         haoju: {
           voice: 'https://miniapi.yvshare.cn/keep/audios/2.mp3',
           // voice: 'http://localhost:3003/keep/audios/2.mp3',
-          sentence: [
+          words: [
             {
               text: ['玉不琢。玉不琢，不成器。人不学，不知义。'],
               point: 0,
