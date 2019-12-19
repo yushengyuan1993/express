@@ -164,9 +164,102 @@ const generateSmallClassRoom = (req) => {
 
   return obj;
 }
+const _generateSmallClassRoom = (req) => {
+  return {
+    type: 'write',
+    cover_image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/25d4f0f1-cc6c-4a2b-9c7f-c6b9be38e807.png',
+    introduction: '重庆市小学语文阅读能力竞赛试题',
+    write_skill_prompt: '',
+    video: 'https://v.kuaizaixuetang.com/2cf96c74vodtransgzp1254368367/e6179e285285890795618110431/v.f23835.mp4',
+    mind_map_images: ['http://test-public-1254368367.file.myqcloud.com/kms/2019-09-24/8f19fc6d-cf1b-432a-99d0-19c1f518a336.jpg'],
+    mind_map_desc: '旅客的情感变化',
+    questions: [
+      {
+        type: 'voice',
+        sort: '1',
+        node_time: '4',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '1.你知道文章大多数内容在写谁吗？',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '',
+        ],
+        answers: [
+          '',
+        ],
+        desc: '文章的大多数在写谁？',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
+        type: 'select',
+        sort: '2',
+        node_time: '8',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '2.下面这句话可以看出奶奶的什么性格特点',
+          '“奶奶坐在窗边，扶着眼镜，拿出旧衣服，开始缝缝补补，她舍不得丢掉，穿不了 的就做成枕套，袖套，奶奶是变废为宝的小能手，妈妈买的新衣服她总是舍不得 穿。”',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '妈妈拿着我的卷子，一遍遍检',
+          '穿不了的就做成枕套',
+          '奶奶是变废为宝的小能手',
+          '买的新衣服她总是舍不得穿',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
+        type: 'imageSelect',
+        sort: '3',
+        node_time: '12',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          'https://miniapi.yvshare.cn/images/videos/4.png',
+          'https://miniapi.yvshare.cn/images/videos/5.png',
+          'https://miniapi.yvshare.cn/images/videos/6.png',
+          'https://miniapi.yvshare.cn/images/videos/15.png',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '描述小红语言来体现小明成绩优秀',
+        writing_harvests: [
+          '',
+        ],
+      },
+    ],
+    contents: [
+      '在乡下一家并不豪华而且有些简陋的旅店里，躺着一位客人，他正在欣赏着楼上传来的优美的钢琴声。琴声一会儿低沉，一会儿高亢；低的时候如珠子在盘中滚动，高的时候像雷鸣震撼大地。',
+      '“这是谁弹的呢？”旅客想着。忽然，“滴答”一声，一滴水滴在他的脸上。他睁眼一看，又一滴水滴入他的眼里，他气极了，大声喊：“来人！”服务员慌慌张张地跑来。旅客生气地问：“楼上是谁？怎么往地上倒水呢？”服务员赶忙答道：“是著名音乐家贝多芬！”',
+      '旅客一听名字，怒气消了一半。',
+      '“要不要我去关照他，不要让水滴下来呢？”“不，不，我自己去。”',
+      '旅客转身上了楼。透过门缝见贝多芬正全神贯注地弹着钢琴，琴边有盆水。他正纳闷，突然看见满身大汗的贝多芬把手指往盆里一浸，又继续弹。啊！原来贝多芬苦练得手指都发烫了，需要随时用冷水冷却一下。因为太专注弹琴，没看到水溅了一地，顺着地板缝滴到楼下去了。',
+      '这位旅客在门外站了很久才离开，当他下楼时，暗暗感叹道：“了不起的贝多芬！”',
+    ],
+  };
+}
+
 router.post('/small-classroom', (req, res, next) => {
   
-  let data = generateSmallClassRoom(req);
+  // let data = generateSmallClassRoom(req);
+  let data = _generateSmallClassRoom(req);
 
   res.send({
     code: 0,
@@ -514,5 +607,7 @@ const generateHappyReadFollow = () => {
 router.get('/happy-read-follow', (req, res, next) => {
   res.send(generateHappyReadFollow());
 })
+
+
 
 module.exports = router;
