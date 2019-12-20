@@ -175,27 +175,6 @@ const _generateSmallClassRoom = (req) => {
     mind_map_desc: '旅客的情感变化',
     questions: [
       {
-        type: 'voice',
-        sort: '1',
-        node_time: '3',
-        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
-        question_texts: [
-          '1.你知道文章大多数内容在写谁吗？',
-        ],
-        question_voice: '',
-        analysis_voice: '',
-        options: [
-          '',
-        ],
-        answers: [
-          '',
-        ],
-        desc: '文章的大多数在写谁？',
-        writing_harvests: [
-          '',
-        ],
-      },
-      {
         type: 'select',
         sort: '2',
         node_time: '6',
@@ -216,6 +195,27 @@ const _generateSmallClassRoom = (req) => {
           '2',
         ],
         desc: '',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
+        type: 'voice',
+        sort: '1',
+        node_time: '3',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '1.你知道文章大多数内容在写谁吗？',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '',
+        ],
+        answers: [
+          '',
+        ],
+        desc: '文章的大多数在写谁？',
         writing_harvests: [
           '',
         ],
