@@ -175,9 +175,38 @@ const _generateSmallClassRoom = (req) => {
     mind_map_desc: '旅客的情感变化',
     questions: [
       {
+        type: 'imageSelect',
+        sort: '3',
+        node_time: '1',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          'https://miniapi.yvshare.cn/images/videos/4.png',
+          'https://miniapi.yvshare.cn/images/videos/5.png',
+          'https://miniapi.yvshare.cn/images/videos/6.png',
+          'https://miniapi.yvshare.cn/images/videos/15.png',
+
+          // 'http://localhost:3003/images/videos/4.png',
+          // 'http://localhost:3003/images/videos/5.png',
+          // 'http://localhost:3003/images/videos/6.png',
+          // 'http://localhost:3003/images/videos/15.png',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '描述小红语言来体现小明成绩优秀',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
         type: 'select',
         sort: '2',
-        node_time: '2',
+        node_time: '3',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '2.下面这句话可以看出奶奶的什么性格特点',
@@ -202,7 +231,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'voice',
         sort: '1',
-        node_time: '4',
+        node_time: '5',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '1.你知道文章大多数内容在写谁吗？',
@@ -216,30 +245,6 @@ const _generateSmallClassRoom = (req) => {
           '',
         ],
         desc: '文章的大多数在写谁？',
-        writing_harvests: [
-          '',
-        ],
-      },
-      {
-        type: 'imageSelect',
-        sort: '3',
-        node_time: '6',
-        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
-        question_texts: [
-          '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
-        ],
-        question_voice: '',
-        analysis_voice: '',
-        options: [
-          'https://miniapi.yvshare.cn/images/videos/4.png',
-          'https://miniapi.yvshare.cn/images/videos/5.png',
-          'https://miniapi.yvshare.cn/images/videos/6.png',
-          'https://miniapi.yvshare.cn/images/videos/15.png',
-        ],
-        answers: [
-          '2',
-        ],
-        desc: '描述小红语言来体现小明成绩优秀',
         writing_harvests: [
           '',
         ],
