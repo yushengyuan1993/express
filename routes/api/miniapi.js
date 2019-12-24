@@ -57,8 +57,8 @@ const generateHappyReadData = () => {
 	    contents,
       node_times,
       footer,
-      image: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
-      voice: `https://miniapi.yvshare.cn/keep/audios/test.mp3`
+      image: `http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png`,
+      voice: `http://139.224.164.195:3003/keep/audios/test.mp3`
     }
 
     data.push(o);
@@ -82,7 +82,7 @@ const generateSmallClassRoom = (req) => {
 
   let _type = req ? req.body.type : 'read';
 
-  let video = _type === 'read' ? 'https://miniapi.yvshare.cn/videos/3.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
+  let video = _type === 'read' ? 'http://139.224.164.195:3003/videos/3.mp4' : 'http://1254368367.vod2.myqcloud.com/2cf96c74vodtransgzp1254368367/f7e1a4ec5285890784532365214/v.f40.mp4';
 
   let contents = [];
   for (let i = 0; i < Random.integer(4, 8); i ++) {
@@ -91,7 +91,7 @@ const generateSmallClassRoom = (req) => {
 
   let mind_map_images = [];
   for (let i = 0; i < Random.integer(1, 3); i ++) {
-    mind_map_images.push(`https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`);
+    mind_map_images.push(`http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png`);
   }
 
   let questions = [];
@@ -132,8 +132,8 @@ const generateSmallClassRoom = (req) => {
     }
 
     let question_text = type === 'voice' ? Random.cparagraph(1) : Random.cparagraph(2, 3);
-    let question_voice = type === 'voice' ? `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png` : 'https://miniapi.yvshare.cn/keep/audios/test.mp3';
-    let analysis_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`;
+    let question_voice = type === 'voice' ? `http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png` : 'http://139.224.164.195:3003/keep/audios/test.mp3';
+    let analysis_voice = `http://139.224.164.195:3003/keep/audios/${Random.integer(1, 3)}.mp3`;
     let desc = Random.cparagraph(1, 3);
 
     let question_content = Random.cparagraph(2, 3);
@@ -205,15 +205,15 @@ const _generateSmallClassRoom = (req) => {
         question_voice: '',
         analysis_voice: '',
         options: [
-          // 'https://miniapi.yvshare.cn/images/videos/4.png',
-          // 'https://miniapi.yvshare.cn/images/videos/5.png',
-          // 'https://miniapi.yvshare.cn/images/videos/6.png',
-          // 'https://miniapi.yvshare.cn/images/videos/15.png',
+          'http://139.224.164.195:3003/images/videos/4.png',
+          'http://139.224.164.195:3003/images/videos/5.png',
+          'http://139.224.164.195:3003/images/videos/6.png',
+          'http://139.224.164.195:3003/images/videos/15.png',
 
-          'http://localhost:3003/images/videos/4.png',
-          'http://localhost:3003/images/videos/5.png',
-          'http://localhost:3003/images/videos/6.png',
-          'http://localhost:3003/images/videos/15.png',
+          // 'http://localhost:3003/images/videos/4.png',
+          // 'http://localhost:3003/images/videos/5.png',
+          // 'http://localhost:3003/images/videos/6.png',
+          // 'http://localhost:3003/images/videos/15.png',
         ],
         answers: [
           '2',
@@ -306,8 +306,8 @@ const generateMindMapData = () => {
     for (let j = 0; j < n2; j ++) {
       let o2 = Mock.mock({
         "type": 'image',
-        "question_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
-        "analysis_voice": `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`,
+        "question_voice": `http://139.224.164.195:3003/keep/audios/${Random.integer(1, 3)}.mp3`,
+        "analysis_voice": `http://139.224.164.195:3003/keep/audios/${Random.integer(1, 3)}.mp3`,
       });
 
       if (j === 0) {
@@ -320,7 +320,7 @@ const generateMindMapData = () => {
       let options = [];
       for (let k = 0; k < n3; k ++) {
         let o3 = Mock.mock({
-          "option": `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`,
+          "option": `http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png`,
           "title": Random.ctitle(3, 6)
         });
         options.push(o3);
@@ -356,7 +356,7 @@ const generateNpc = () => {
   for (let i = 0; i < 3; i ++) {
     let o = {
       name: Random.ctitle(2, 5),
-      avatar: `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`
+      avatar: `http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png`
     }
 
     npc.push(o);
@@ -377,7 +377,7 @@ const generateQuizData = () => {
 
     let level = i > 2 ? 'advanced' : 'base';
     let question_text = Random.cparagraph(1, 2);
-    let question_voice = `https://miniapi.yvshare.cn/keep/audios/${Random.integer(1, 3)}.mp3`;
+    let question_voice = `http://139.224.164.195:3003/keep/audios/${Random.integer(1, 3)}.mp3`;
     let options = [];
     let answers = [1];
     let analysis = Random.cparagraph(1, 3);
@@ -515,7 +515,7 @@ router.post('/calendar', (req, res, next) => {
   let first_step = { title, happy_read, mind_maps, quiz, small_classroom };
   first_step = JSON.stringify(first_step);
   period_content.first_step = first_step;
-  period_content.course_img = `https://miniapi.yvshare.cn/images/videos/${Random.integer(0, 249)}.png`;
+  period_content.course_img = `http://139.224.164.195:3003/images/videos/${Random.integer(0, 249)}.png`;
   // period_content.type = 'read'; // read/write
   period_content.type = req.body.type; // read/write
   period_content.lesson_title = Random.ctitle(4, 7);
@@ -592,7 +592,7 @@ const generateHappyReadFollow = () => {
     data: {
       follow: {
         haoci: {
-          voice: 'https://miniapi.yvshare.cn/keep/audios/1.mp3',
+          voice: 'http://139.224.164.195:3003/keep/audios/1.mp3',
           // voice: 'http://localhost:3003/keep/audios/1.mp3',
           words: [
             {
@@ -613,7 +613,7 @@ const generateHappyReadFollow = () => {
           ]
         },
         haoju: {
-          voice: 'https://miniapi.yvshare.cn/keep/audios/2.mp3',
+          voice: 'http://139.224.164.195:3003/keep/audios/2.mp3',
           // voice: 'http://localhost:3003/keep/audios/2.mp3',
           words: [
             {
