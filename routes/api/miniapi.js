@@ -175,9 +175,29 @@ const _generateSmallClassRoom = (req) => {
     mind_map_desc: '旅客的情感变化',
     questions: [
       {
+        type: 'drag',
+        sort: '1',
+        node_time: '2',
+        question_texts: [
+          ['月', '出', '于', '*', '，', '徘', '徊', '于', '斗', '牛', '之', '间', '。', '*', '横', '江', '，', '水', '光', '接', '天', '。', '纵', '一', '苇', '之', '所', '如', '，', '*', '万', '顷', '之', '茫', '然', '。'],
+        ],
+        question_voice: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/b9f340fc-5a8d-440b-9116-221a82e1267b.mp3',
+        options: [
+          '白露',
+          '东山之上',
+          '斗牛之间',
+          '斗牛之间',
+          '凌',
+          '斗牛之间',
+        ],
+        right_options: [],
+        answers: ['2', '1', '5'],
+        harvest_type: '夯实基础',
+      },
+      {
         type: 'imageSelect',
         sort: '3',
-        node_time: '1',
+        node_time: '3',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
@@ -185,15 +205,15 @@ const _generateSmallClassRoom = (req) => {
         question_voice: '',
         analysis_voice: '',
         options: [
-          'https://miniapi.yvshare.cn/images/videos/4.png',
-          'https://miniapi.yvshare.cn/images/videos/5.png',
-          'https://miniapi.yvshare.cn/images/videos/6.png',
-          'https://miniapi.yvshare.cn/images/videos/15.png',
+          // 'https://miniapi.yvshare.cn/images/videos/4.png',
+          // 'https://miniapi.yvshare.cn/images/videos/5.png',
+          // 'https://miniapi.yvshare.cn/images/videos/6.png',
+          // 'https://miniapi.yvshare.cn/images/videos/15.png',
 
-          // 'http://localhost:3003/images/videos/4.png',
-          // 'http://localhost:3003/images/videos/5.png',
-          // 'http://localhost:3003/images/videos/6.png',
-          // 'http://localhost:3003/images/videos/15.png',
+          'http://localhost:3003/images/videos/4.png',
+          'http://localhost:3003/images/videos/5.png',
+          'http://localhost:3003/images/videos/6.png',
+          'http://localhost:3003/images/videos/15.png',
         ],
         answers: [
           '2',
@@ -206,7 +226,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'select',
         sort: '2',
-        node_time: '3',
+        node_time: '7',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '2.下面这句话可以看出奶奶的什么性格特点',
@@ -231,7 +251,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'voice',
         sort: '1',
-        node_time: '5',
+        node_time: '8',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '1.你知道文章大多数内容在写谁吗？',
