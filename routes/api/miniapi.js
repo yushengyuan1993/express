@@ -195,9 +195,34 @@ const _generateSmallClassRoom = (req) => {
         harvest_type: '夯实基础',
       },
       {
+        type: 'select',
+        sort: '2',
+        node_time: '3',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '2.下面这句话可以看出奶奶的什么性格特点',
+          '“奶奶坐在窗边，扶着眼镜，拿出旧衣服，开始缝缝补补，她舍不得丢掉，穿不了 的就做成枕套，袖套，奶奶是变废为宝的小能手，妈妈买的新衣服她总是舍不得 穿。”',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '妈妈拿着我的卷子，一遍遍检',
+          '穿不了的就做成枕套',
+          '奶奶是变废为宝的小能手',
+          '买的新衣服她总是舍不得穿',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
         type: 'imageSelect',
         sort: '3',
-        node_time: '3',
+        node_time: '4',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
@@ -224,34 +249,9 @@ const _generateSmallClassRoom = (req) => {
         ],
       },
       {
-        type: 'select',
-        sort: '2',
-        node_time: '7',
-        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
-        question_texts: [
-          '2.下面这句话可以看出奶奶的什么性格特点',
-          '“奶奶坐在窗边，扶着眼镜，拿出旧衣服，开始缝缝补补，她舍不得丢掉，穿不了 的就做成枕套，袖套，奶奶是变废为宝的小能手，妈妈买的新衣服她总是舍不得 穿。”',
-        ],
-        question_voice: '',
-        analysis_voice: '',
-        options: [
-          '妈妈拿着我的卷子，一遍遍检',
-          '穿不了的就做成枕套',
-          '奶奶是变废为宝的小能手',
-          '买的新衣服她总是舍不得穿',
-        ],
-        answers: [
-          '2',
-        ],
-        desc: '',
-        writing_harvests: [
-          '',
-        ],
-      },
-      {
         type: 'voice',
         sort: '1',
-        node_time: '8',
+        node_time: '5',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '1.你知道文章大多数内容在写谁吗？',
