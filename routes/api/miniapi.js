@@ -177,7 +177,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'drag',
         sort: '1',
-        node_time: '2',
+        node_time: '3',
         question_texts: [
           ['月', '出', '于', '*', '，', '徘', '徊', '于', '斗', '牛', '之', '间', '。', '*', '横', '江', '，', '水', '光', '接', '天', '。', '纵', '一', '苇', '之', '所', '如', '，', '*', '万', '顷', '之', '茫', '然', '。'],
         ],
@@ -197,7 +197,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'select',
         sort: '2',
-        node_time: '3',
+        node_time: '5',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '2.下面这句话可以看出奶奶的什么性格特点',
@@ -222,7 +222,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'imageSelect',
         sort: '3',
-        node_time: '4',
+        node_time: '7',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
@@ -251,7 +251,7 @@ const _generateSmallClassRoom = (req) => {
       {
         type: 'voice',
         sort: '1',
-        node_time: '5',
+        node_time: '9',
         image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
         question_texts: [
           '1.你知道文章大多数内容在写谁吗？',
