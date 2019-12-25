@@ -687,17 +687,17 @@ const generateHappyReadFollow = () => {
           // voice: 'http://localhost:3003/keep/audios/1.mp3',
           words: [
             {
-              text: ['明媚'],
+              text: '明媚',
               point: 0,
               high_light: 'not_high_light',
             },
             {
-              text: ['暖意'],
+              text: '暖意',
               point: 3,
               high_light: 'not_high_light',
             },
             {
-              text: ['大帝出征', '详细信息'],
+              text: '大帝出征详细信息',
               point: 6,
               high_light: 'not_high_light',
             },
@@ -708,7 +708,7 @@ const generateHappyReadFollow = () => {
           // voice: 'http://localhost:3003/keep/audios/2.mp3',
           words: [
             {
-              text: ['玉不琢。玉不琢，不成器。人不学，不知义。'],
+              text: '玉不琢。玉不琢，不成器。人不学，不知义。',
               point: 0,
               high_light: 'not_high_light',
             }
