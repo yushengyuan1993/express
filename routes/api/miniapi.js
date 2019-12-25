@@ -269,6 +269,101 @@ const _generateSmallClassRoom = (req) => {
           '',
         ],
       },
+      {
+        type: 'drag',
+        sort: '1',
+        node_time: '11',
+        question_texts: [
+          ['月', '出', '于', '*', '，', '徘', '徊', '于', '斗', '牛', '之', '间', '。', '*', '横', '江', '，', '水', '光', '接', '天', '。', '纵', '一', '苇', '之', '所', '如', '，', '*', '万', '顷', '之', '茫', '然', '。'],
+        ],
+        question_voice: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/b9f340fc-5a8d-440b-9116-221a82e1267b.mp3',
+        options: [
+          '白露',
+          '东山之上',
+          '斗牛之间',
+          '斗牛之间',
+          '凌',
+          '斗牛之间',
+        ],
+        right_options: [],
+        answers: ['2', '1', '5'],
+        harvest_type: '夯实基础',
+      },
+      {
+        type: 'select',
+        sort: '2',
+        node_time: '13',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '2.下面这句话可以看出奶奶的什么性格特点',
+          '“奶奶坐在窗边，扶着眼镜，拿出旧衣服，开始缝缝补补，她舍不得丢掉，穿不了 的就做成枕套，袖套，奶奶是变废为宝的小能手，妈妈买的新衣服她总是舍不得 穿。”',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '妈妈拿着我的卷子，一遍遍检',
+          '穿不了的就做成枕套',
+          '奶奶是变废为宝的小能手',
+          '买的新衣服她总是舍不得穿',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
+        type: 'imageSelect',
+        sort: '3',
+        node_time: '15',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '3.请你通过描述小红的语言，来体现小明成绩的优秀。',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          'http://139.224.164.195:3003/images/videos/4.png',
+          'http://139.224.164.195:3003/images/videos/5.png',
+          'http://139.224.164.195:3003/images/videos/6.png',
+          'http://139.224.164.195:3003/images/videos/15.png',
+
+          // 'http://localhost:3003/images/videos/4.png',
+          // 'http://localhost:3003/images/videos/5.png',
+          // 'http://localhost:3003/images/videos/6.png',
+          // 'http://localhost:3003/images/videos/15.png',
+        ],
+        answers: [
+          '2',
+        ],
+        desc: '描述小红语言来体现小明成绩优秀',
+        writing_harvests: [
+          '',
+        ],
+      },
+      {
+        type: 'voice',
+        sort: '1',
+        node_time: '17',
+        image: 'http://public-1254368367.file.myqcloud.com/kms/2019-10-24/3abdfbea-270e-4169-b328-1034588ec839.png',
+        question_texts: [
+          '1.你知道文章大多数内容在写谁吗？',
+        ],
+        question_voice: '',
+        analysis_voice: '',
+        options: [
+          '',
+        ],
+        answers: [
+          '',
+        ],
+        desc: '文章的大多数在写谁？',
+        writing_harvests: [
+          '',
+        ],
+      },
     ],
     contents: [
       '在乡下一家并不豪华而且有些简陋的旅店里，躺着一位客人，他正在欣赏着楼上传来的优美的钢琴声。琴声一会儿低沉，一会儿高亢；低的时候如珠子在盘中滚动，高的时候像雷鸣震撼大地。',
