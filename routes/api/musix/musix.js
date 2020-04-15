@@ -4,7 +4,7 @@ const router = express.Router();
 const decode = require('./decode');
 
 router.get('/decode', (req, res, next) => {
-  const query = req.query;
+  const query = req.query.query;
 
   let _ = {
     code: 0,
