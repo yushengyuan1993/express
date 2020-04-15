@@ -2,16 +2,16 @@ const express = require('express');
 const router = express.Router();
 const Mock  = require('mockjs');
 const { Random } = Mock;
-const config = require('./config');
+// const config = require('./config');
 
-router.post('/mini-app-login', (req, res, next) => {
-  res.send({
-    code: 0,
-    data: config.userinfo,
-    message: 'success',
-    timestamp: + new Date()
-  });
-});
+// router.post('/mini-app-login', (req, res, next) => {
+//   res.send({
+//     code: 0,
+//     data: config.userinfo,
+//     message: 'success',
+//     timestamp: + new Date()
+//   });
+// });
 
 const generateHappyReadData = () => {
   let data = [];

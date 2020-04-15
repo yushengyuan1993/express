@@ -14,6 +14,8 @@ const video = require('./routes/app/video');
 const cheerio = require('./routes/cheerio');
 const book = require('./routes/app/book');
 
+const musix = require('./routes/api/musix/musix');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -39,9 +41,11 @@ app.use('/users', usersRouter);
 app.use('/miniapi', miniapi);
 app.use('/activity', activity);
 app.use('/catch', error_catch);
-app.use('/video', video)
-app.use('/book', book)
-app.use('/cheerio', cheerio)
+app.use('/video', video);
+app.use('/book', book);
+app.use('/cheerio', cheerio);
+
+app.use('/musix', musix);
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {

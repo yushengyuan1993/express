@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "starts": "node ./bin/www",
-    "start": "node-dev ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "node-dev ./bin/www"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
