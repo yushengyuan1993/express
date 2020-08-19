@@ -4,6 +4,8 @@ const Mock  = require('mockjs');
 const { Random } = Mock;
 const config = require('./config');
 
+const level_2_train = require('./data/level-2-train');
+
 router.post('/mini-app-login', (req, res, next) => {
   res.send({
     code: 0,
@@ -724,6 +726,14 @@ router.get('/happy-read-follow', (req, res, next) => {
   res.send(generateHappyReadFollow());
 })
 
-
+// level-2 思维导图-火车
+router.get('/level-2-train', (req, res, next) => {
+  res.send({
+    code: 0,
+    data: level_2_train,
+    message: 'success',
+    timestamp: +new Date()
+  })
+})
 
 module.exports = router;
