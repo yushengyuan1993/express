@@ -9,8 +9,8 @@ const data = {
   "lesson_period": [],
   "homework_id": 0,
   "period_content": {
-      "id": 8008956,
-      "name": "摘叶著书",
+      "id": 8008950,
+      "name": "剪叶的学问",
       "number": null,
       "course_img": "https://public-1254368367.file.myqcloud.com/kms/2020-07-21/60ae6110-7487-48ba-976c-2d54712b0e97.png",
       "practice_img": "",
@@ -49,11 +49,11 @@ const data = {
   "course_grade": 3,
   "subject": 2,
   "level": null,
-  "lesson_period_id": "8008956",
+  "lesson_period_id": "8008950",
   "lesson_count": 0,
   "learned_lesson_count": 0,
   "course_type": 9,
-  "share_title": "我发现一个好课：《硅谷工程师爸爸的超强思维导图课 | 摘叶著书》，帮助孩子高效学习。",
+  "share_title": "我发现一个好课：《硅谷工程师爸爸的超强思维导图课 | 剪叶的学问》，帮助孩子高效学习。",
   "share_content": "超强的思维导图高效学习法，将思维导图与学科学习结合起来，引领孩子掌握科学思维方法。",
   "share_img": "https://public-1254368367.file.myqcloud.com/kms/2020-07-07/5960445a-de13-4e1f-88d4-400d29809a9a.png"
 };
