@@ -84,6 +84,35 @@ const data = [
     answers: ["1", "3"]
   },
   {
+    title: '图片选择-单选',
+    type: 'imageSelect',
+    multiple: false,
+    question_text: [
+      "下面句子中“de”字使用错误的是哪一项？"
+    ],
+    options: [
+      "大鲨鱼气势汹汹地游过来。",
+      "小鱼们游地很慢。",
+      "大鲨鱼摸着瘪瘪的肚子。"
+    ],
+    answers: ["2"]
+  },
+  {
+    title: '图片选择-多选',
+    type: 'imageSelect',
+    _type: 'multipleImageSelect',
+    multiple: true,
+    question_text: [
+      "文中写了郑板桥爱子的哪些事？"
+    ],
+    options: [
+      "写信告诉弟弟要严格管教自己的儿子。",
+      "夸奖孩子愿意吃并不好吃的窝窝头。",
+      "临终前教育孩子要自立，学会自己做事。"
+    ],
+    answers: ["1", "3"]
+  },
+  {
     title: '连线题',
     type: 'linkLine',
     multiple: false,
