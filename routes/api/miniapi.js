@@ -5,6 +5,7 @@ const { Random } = Mock;
 const config = require('./config');
 
 const level_2_train = require('./data/level-2-train');
+const level_2_pk = require('./data/level-2-pk');
 
 router.post('/mini-app-login', (req, res, next) => {
   res.send({
@@ -731,6 +732,16 @@ router.get('/level-2-train', (req, res, next) => {
   res.send({
     code: 0,
     data: level_2_train,
+    message: 'success',
+    timestamp: +new Date()
+  })
+})
+
+// level-2 PK
+router.get('/level-2-pk', (req, res, next) => {
+  res.send({
+    code: 0,
+    data: level_2_pk,
     message: 'success',
     timestamp: +new Date()
   })

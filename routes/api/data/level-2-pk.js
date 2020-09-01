@@ -66,14 +66,42 @@ const data = [
       "小鱼们游地很慢。",
       "大鲨鱼摸着瘪瘪的肚子。"
     ],
-    answers: [
-      "2"
-    ]
+    answers: ["2"]
   },
   {
     title: '文字选择-多选',
     type: 'select',
+    _type: 'multipleSelect',
     multiple: true,
-    
-  }
+    question_text: [
+      "文中写了郑板桥爱子的哪些事？"
+    ],
+    options: [
+      "写信告诉弟弟要严格管教自己的儿子。",
+      "夸奖孩子愿意吃并不好吃的窝窝头。",
+      "临终前教育孩子要自立，学会自己做事。"
+    ],
+    answers: ["1", "3"]
+  },
+  {
+    title: '连线题',
+    type: 'linkLine',
+    multiple: false,
+    question_text: [
+      "今天的文章中出现了好几组反义词，请你连一连。"
+    ],
+    options: [
+      "谦虚",
+      "黑暗",
+      "点燃"
+    ],
+    right_options: [
+      "明亮",
+      "熄灭",
+      "骄傲"
+    ],
+    answers: ["3","1","2"]
+  },
 ];
+
+module.exports = data;
