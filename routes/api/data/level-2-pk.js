@@ -72,8 +72,7 @@ const data = [
   },
   {
     title: '文字选择-多选',
-    type: 'select',
-    _type: 'multipleSelect',
+    type: 'multipleSelect',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     multiple: true,
     question_text: [
@@ -103,8 +102,7 @@ const data = [
   },
   {
     title: '图片选择-多选',
-    type: 'imageSelect',
-    _type: 'multipleImageSelect',
+    type: 'imageMultipleSelect',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     multiple: true,
     question_text: [
@@ -119,7 +117,7 @@ const data = [
   },
   {
     title: '连线题',
-    type: 'linkLine',
+    type: 'linkLine', // imageLinkLine
     multiple: false,
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     question_text: [
