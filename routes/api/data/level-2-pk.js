@@ -1,8 +1,21 @@
 const data = [
   {
+    title: '文字选择-单选',
+    type: 'select',
+    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
+    question_text: [
+      "下面句子中“de”字使用错误的是哪一项？"
+    ],
+    options: [
+      "大鲨鱼气势汹汹地游过来。",
+      "小鱼们游地很慢。",
+      "大鲨鱼摸着瘪瘪的肚子。"
+    ],
+    answers: ["2"]
+  },
+  {
     title: '拖拽题',
     type: 'drag',
-    multiple: false,
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     question_text: [
       [
@@ -56,25 +69,9 @@ const data = [
     answers: ["1", "3"],
   },
   {
-    title: '文字选择-单选',
-    type: 'select',
-    multiple: false,
-    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    question_text: [
-      "下面句子中“de”字使用错误的是哪一项？"
-    ],
-    options: [
-      "大鲨鱼气势汹汹地游过来。",
-      "小鱼们游地很慢。",
-      "大鲨鱼摸着瘪瘪的肚子。"
-    ],
-    answers: ["2"]
-  },
-  {
     title: '文字选择-多选',
     type: 'multipleSelect',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    multiple: true,
     question_text: [
       "文中写了郑板桥爱子的哪些事？"
     ],
@@ -88,7 +85,6 @@ const data = [
   {
     title: '图片选择-单选',
     type: 'imageSelect',
-    multiple: false,
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     question_text: [
       "下面句子中“de”字使用错误的是哪一项？"
@@ -104,7 +100,6 @@ const data = [
     title: '图片选择-多选',
     type: 'imageMultipleSelect',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    multiple: true,
     question_text: [
       "文中写了郑板桥爱子的哪些事？"
     ],
@@ -118,7 +113,6 @@ const data = [
   {
     title: '连线题',
     type: 'linkLine', // imageLinkLine
-    multiple: false,
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     question_text: [
       "今天的文章中出现了好几组反义词，请你连一连。"
