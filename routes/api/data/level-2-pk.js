@@ -1,5 +1,32 @@
 const data = [
   {
+    title: '图片选择-单选',
+    type: 'imageSelect',
+    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
+    question_text: [
+      "下面句子中“de”字使用错误的是哪一项？"
+    ],
+    options: [
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-14/5b22456a-d5b8-40b3-9842-5468d48a1f5e.png",
+        title: '',
+      }
+    ],
+    answers: ["2"]
+  },
+  {
     title: '文字选择-单选',
     type: 'select',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
@@ -99,29 +126,6 @@ const data = [
       }
     ],
     answers: ["1", "3"]
-  },
-  {
-    title: '图片选择-单选',
-    type: 'imageSelect',
-    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    question_text: [
-      "下面句子中“de”字使用错误的是哪一项？"
-    ],
-    options: [
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
-        title: '',
-      },
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
-        title: '',
-      },
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
-        title: '',
-      }
-    ],
-    answers: ["2"]
   },
   {
     title: '图片选择-多选',
