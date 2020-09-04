@@ -7,9 +7,15 @@ const data = [
       "下面句子中“de”字使用错误的是哪一项？"
     ],
     options: [
-      "大鲨鱼气势汹汹地游过来。",
-      "小鱼们游地很慢。",
-      "大鲨鱼摸着瘪瘪的肚子。"
+      {
+        content: "大鲨鱼气势汹汹地游过来。"
+      },
+      {
+        content: "小鱼们游地很慢。"
+      },
+      {
+        content: "大鲨鱼摸着瘪瘪的肚子。"
+      }
     ],
     answers: ["2"]
   },
@@ -62,9 +68,15 @@ const data = [
       ]
     ],
     options: [
-      "cuān",
-      "cuɑn",
-      "uān"
+      {
+        content: "cuān"
+      },
+      {
+        content: "cuɑn"
+      },
+      {
+        content: "uān"
+      }
     ],
     answers: ["1", "3"],
   },
@@ -76,9 +88,15 @@ const data = [
       "文中写了郑板桥爱子的哪些事？"
     ],
     options: [
-      "写信告诉弟弟要严格管教自己的儿子。",
-      "夸奖孩子愿意吃并不好吃的窝窝头。",
-      "临终前教育孩子要自立，学会自己做事。"
+      {
+        content: "写信告诉弟弟要严格管教自己的儿子。"
+      },
+      {
+        content: "夸奖孩子愿意吃并不好吃的窝窝头。"
+      },
+      {
+        content: "临终前教育孩子要自立，学会自己做事。"
+      }
     ],
     answers: ["1", "3"]
   },
@@ -90,9 +108,18 @@ const data = [
       "下面句子中“de”字使用错误的是哪一项？"
     ],
     options: [
-      "大鲨鱼气势汹汹地游过来。",
-      "小鱼们游地很慢。",
-      "大鲨鱼摸着瘪瘪的肚子。"
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
+        title: '',
+      }
     ],
     answers: ["2"]
   },
@@ -104,9 +131,18 @@ const data = [
       "文中写了郑板桥爱子的哪些事？"
     ],
     options: [
-      "写信告诉弟弟要严格管教自己的儿子。",
-      "夸奖孩子愿意吃并不好吃的窝窝头。",
-      "临终前教育孩子要自立，学会自己做事。"
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
+        title: '',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
+        title: '',
+      }
     ],
     answers: ["1", "3"]
   },
