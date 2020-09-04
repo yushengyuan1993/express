@@ -27,6 +27,29 @@ const data = [
     answers: ["2"]
   },
   {
+    title: '图片选择-多选',
+    type: 'imageMultipleSelect',
+    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
+    question_text: [
+      "文中写了郑板桥爱子的哪些事？"
+    ],
+    options: [
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
+        title: '舌尖的味道',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
+        title: '舌尖的味道',
+      },
+      {
+        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
+        title: '舌尖的味道',
+      }
+    ],
+    answers: ["1", "3"]
+  },
+  {
     title: '文字选择-单选',
     type: 'select',
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
@@ -123,29 +146,6 @@ const data = [
       },
       {
         content: "临终前教育孩子要自立，学会自己做事。"
-      }
-    ],
-    answers: ["1", "3"]
-  },
-  {
-    title: '图片选择-多选',
-    type: 'imageMultipleSelect',
-    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    question_text: [
-      "文中写了郑板桥爱子的哪些事？"
-    ],
-    options: [
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2020-02-20/34fc4a51-fb22-47b9-97ae-5bd116eab8ce.png",
-        title: '',
-      },
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2020-06-04/b1b61eef-97bc-4b01-bf0b-96fe8e13a66c.png",
-        title: '',
-      },
-      {
-        content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
-        title: '',
       }
     ],
     answers: ["1", "3"]
