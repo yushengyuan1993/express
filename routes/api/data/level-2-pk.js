@@ -1,37 +1,6 @@
 const data = [
   {
     title: '连线题',
-    type: 'linkLine', // imageLinkLine
-    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
-    question_text: [
-      "今天的文章中出现了好几组反义词，请你连一连。"
-    ],
-    options: [
-      {
-        content: "谦虚",
-      },
-      {
-        content: "黑暗",
-      },
-      {
-        content: "点燃",
-      }
-    ],
-    right_options: [
-      {
-        content: "明亮",
-      },
-      {
-        content: "熄灭",
-      },
-      {
-        content: "骄傲",
-      }
-    ],
-    answers: ["3","1","2"]
-  },
-  {
-    title: '连线题',
     type: 'imageLinkLine', // imageLinkLine
     question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
     question_text: [
@@ -49,6 +18,37 @@ const data = [
       {
         content: "https://public-1254368367.file.myqcloud.com/kms/2019-12-23/1b811a6c-1895-40ea-8b9e-350ee824ba6a.png",
         title: '',
+      }
+    ],
+    right_options: [
+      {
+        content: "明亮",
+      },
+      {
+        content: "熄灭",
+      },
+      {
+        content: "骄傲",
+      }
+    ],
+    answers: ["3","1","2"]
+  },
+  {
+    title: '连线题',
+    type: 'linkLine', // imageLinkLine
+    question_voice: "https://public-1254368367.file.myqcloud.com/kms/2020-08-22/d20625cb-ab8d-4ce2-b678-0fc61b42c692.mp3",
+    question_text: [
+      "今天的文章中出现了好几组反义词，请你连一连。"
+    ],
+    options: [
+      {
+        content: "谦虚",
+      },
+      {
+        content: "黑暗",
+      },
+      {
+        content: "点燃",
       }
     ],
     right_options: [
