@@ -6,7 +6,32 @@ const data = {
   "is_demo": 1,
   "special_id": "3000361",
   "special_name": "第七月",
-  "lesson_period": [],
+  "lesson_period": [
+    {
+      "carrot": 0,
+      "id": 22248909,
+      "star": 3,
+      "step_type": 1,
+    },
+    {
+      "carrot": 0,
+      "id": 22248909,
+      "star": 2,
+      "step_type": 1,
+    },
+    {
+      "carrot": 0,
+      "id": 22248909,
+      "star": 3,
+      "step_type": 1,
+    },
+    {
+      "carrot": 0,
+      "id": 22248909,
+      "star": 2,
+      "step_type": 1,
+    },
+  ],
   "homework_id": 0,
   "period_content": {
       "id": 8008950,
