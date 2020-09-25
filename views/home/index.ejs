@@ -16,7 +16,7 @@
       let n2 = 0;
       const getData = () => {
         return new Promise((resolve, reject) => {
-          axios.get('http://localhost:3003/activity/eat')
+          axios.get('https://miniapi.yvshare.cn/activity/eat')
           .then(res => {
             console.log(res)
             if (res.status === 200) {
