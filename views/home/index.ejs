@@ -32,20 +32,6 @@
       }
 
       const fn = () => {
-        axios.get('http://localhost:3003/activity/eat')
-          .then(res => {
-            console.log(res)
-            if (res.status === 200) {
-              resolve(res.data.data)
-            } else {
-              reject(res.statusText)
-            }
-          })
-          .catch(error => {
-            reject(error)
-          })
-
-
         getData().then(res => {
           const { restaurant, type, r1, r2 } = res;
           console.log(res);
