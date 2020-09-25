@@ -178,4 +178,24 @@ router.get('/home-layout-activity-data', (req, res, next) => {
   })
 })
 
+router.get('/eat', (req, res, next) => {
+  const n = Math.floor(Math.random() * (100) + 1);
+  const f1 = '豆捞坊';
+  const f2 = '风和日丽';
+  const result = n > 50 ? f1 : f2;
+  const type = n > 50 ? 'f1' : 'f2';
+
+  res.send({
+    code: 0,
+    data: {
+      restaurant: result,
+      type: type,
+      r1: f1,
+      r2: f2,
+    },
+    message: 'success',
+    timestamp: + new Date()
+  })
+});
+
 module.exports = router

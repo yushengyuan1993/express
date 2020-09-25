@@ -6,9 +6,58 @@
     <script src="/js/libs/axios.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <h1>吃：<span id="result"></span></h1>
+    <div>风和日丽：<span id="n1"></span>票</div>
+    <div>豆捞坊：<span id="n2"></span>票</div>
+    <div>共选了：<span id="n"></span>次</div>
+    <div><button id="btn">选一选</button></div>
     <script>
-      console.log(new Date());
+      let n1 = 0;
+      let n2 = 0;
+      const getData = () => {
+        return new Promise((resolve, reject) => {
+          axios.get('http://localhost:3003/activity/eat')
+          .then(res => {
+            console.log(res)
+            if (res.status === 200) {
+              resolve(res.data.data)
+            } else {
+              reject(res.statusText)
+            }
+          })
+          .catch(error => {
+            reject(error)
+          })
+        });
+      }
+
+      const fn = () => {
+        getData().then(res => {
+          const { restaurant, type, r1, r2 } = res;
+          console.log(res);
+
+          if (type === 'f1') n1 += 1;
+          if (type === 'f2') n2 += 1;
+
+          const n = n1 + n2;
+
+          document.querySelector('#n1').innerHTML = n1;
+          document.querySelector('#n2').innerHTML = n2;
+          document.querySelector('#n').innerHTML = n;
+
+          if (n > 4) {
+            const r = n1 > n2 ? r1 : r2;
+            document.querySelector('#result').innerHTML = r;
+          }
+        })
+      }
+
+      fn();
+
+      btn.onclick = () => {
+        fn();
+      };
+      
     </script>
   </body>
 </html>
