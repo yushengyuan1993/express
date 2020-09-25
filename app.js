@@ -16,6 +16,8 @@ const book = require('./routes/app/book');
 
 const musix = require('./routes/api/musix/musix');
 
+const homeIndex = require('./routes/index');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -37,6 +39,7 @@ const allowCors = function(req, res, next) {
 app.use(allowCors);
 
 app.use('/', indexRouter);
+app.use('/home/index', homeIndex);
 app.use('/users', usersRouter);
 app.use('/miniapi', miniapi);
 app.use('/activity', activity);
