@@ -34,10 +34,8 @@
       const fn = () => {
         axios.get('http://localhost:3003/activity/eat')
           .then(res => {
-            console.log(res)
             if (res.status === 200) {
               const { restaurant, type, r1, r2 } = res.data.data;
-              console.log(res);
 
               if (type === 'f1') n1 += 1;
               if (type === 'f2') n2 += 1;
