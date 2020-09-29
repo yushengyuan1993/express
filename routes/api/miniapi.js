@@ -7,6 +7,7 @@ const config = require('./config');
 const level_2_train = require('./data/level-2-train');
 const level_2_ferris_wheel = require('./data/level-2-ferris-wheel');
 const level_2_pk = require('./data/level-2-pk');
+const calendar = require('./data/calendar');
 
 router.post('/mini-app-login', (req, res, next) => {
   res.send({
@@ -641,7 +642,8 @@ router.post('/calendar', (req, res, next) => {
 
   res.send({
     code: 0,
-    data: data,
+    // data: data,
+    data: calendar,
     message: 'success',
     timestamp: +new Date()
   })
