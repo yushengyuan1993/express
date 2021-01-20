@@ -80,5 +80,6 @@ typings/
 
 *.crt
 *.key
+*.pem
 package-lock.json
 routes/api/config.js
