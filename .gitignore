@@ -78,7 +78,7 @@ typings/
 # dotenv environment variables file
 .env
 
-1_miniapi.yvshare.cn_bundle.crt
-2_miniapi.yvshare.cn.key
+*.crt
+*.key
 package-lock.json
 routes/api/config.js
